@@ -11,6 +11,17 @@ $text_initial = strtolower($text);
 // Removing all the space
 $text_initial = str_replace(" ","",$text_initial);
 
+// String Reverse function
+
+function StringReverse($input_text) {
+    $letters = "";
+    for($i=strlen($input_text);$i>=0;$i--)
+    {
+        $letters.=$input_text[$i];
+    }
+    return($input_text);
+}
+
 
 // Result
-echo "$text_initial";
+echo StringReverse($text_initial);
