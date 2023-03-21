@@ -1,6 +1,10 @@
 <?php
 
-// Getting an input
+// Conversion Data
+$conversion_ratio = 0.1524;
+$input = 100;
 
-$number = (string)readline("Enter a number: ");
-echo 'You picked the number: '.$number;
+// Converting Francs into Euro
+$result = $input * $conversion_ratio
+
+echo "Your ".$input." Francs worth ".$result." Euro !";
