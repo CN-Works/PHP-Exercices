@@ -2,16 +2,25 @@
 
 // Base Sentence in french
 $text = "Engage le jeu que je le gagne";
+$base_text = $text;
+$text = strtolower($text);
 $reversed_text='';
 
-// Reversing the text to check if it is a palindromic sentence
-for($i=strlen($text);$i>=0;$i--)
+// removing space in sentence
+str_replace(" ","",$text);
+echo "reversed : $text \n "
+$modified_text = $text;
+$reversed_text = $modified_text;
+$cache_letters = "";
+
+// Reversing the sentence
+for($i=strlen($reversed_text);$i>=0;$i--)
 {
-    $reversed_text.=$text[$i];
+    $cache_letters.=$reversed_text[$i];
 }
 
-if ($text = $reversed_text) {
-    echo "The sentence < ".$text." > is a palindromic sentence !";
+if ($modified_text == $reversed_text) {
+    echo "The sentence < ".$base_text." > is a palindromic sentence !";
 } else {
-    echo "The sentence < ".$text." > is not a palindromic sentence !";
+    echo "The sentence < ".$base_text." > is not a palindromic sentence !";
 }
