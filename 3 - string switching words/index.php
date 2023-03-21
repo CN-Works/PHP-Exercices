@@ -1,4 +1,5 @@
 // Base sentence
 $text = "Our php lesson begins today";
-// Replacing words
+
+// Printing and replacing words
 echo str_replace("today","tomorrow",$text);
