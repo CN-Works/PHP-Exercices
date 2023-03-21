@@ -2,10 +2,14 @@
 
 // Basket data | 1 = Price per item / 2 = Item amount
 $basket = array(9.99,5);
-$vat_ratio = 0.2;
+$vat = 20;
+$vat_ratio = $vat/100;
 
 // Amount to pay
-$amount = $basket[1]*$basket[2];
+$amount = (float)$basket[0]*$basket[1];
+$amount = number_format($amount, 2,".","");
+
+// VAT calculation
 
 // Print
-echo "Total amount to pay : ".$amount;
+echo "Taxes : ".$vat."% (".$vat_ratio.")\nTotal amount: ".$amount."$";
