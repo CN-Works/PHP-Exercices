@@ -13,15 +13,16 @@ $text_initial = str_replace(" ","",$text_initial);
 
 // String Reverse function
 
-function StringReverse($input_text) {
-    $letters = "";
-    for($i=strlen($input_text);$i>=0;$i--)
-    {
-        $letters.=$input_text[$i];
-    }
-    return($input_text);
+function StringReverse($str)
+{
+    if (strlen($str) <= 1) return $str;
+ 
+    $newstr = '';
+    $newstr .= substr($str,-1).StringReverse(substr($str,0,strlen($str)-1));
+ 
+    return $newstr;
 }
 
-
 // Result
+
 echo StringReverse($text_initial);
