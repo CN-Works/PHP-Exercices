@@ -23,6 +23,14 @@ function StringReverse($str)
     return $newstr;
 }
 
+// Reversed string
+
+$text_reversed = StringReverse($text_initial);
+
 // Result
 
-echo StringReverse($text_initial);
+if ($text_initial == $text_reversed) {
+    echo "The sentence < ".$text." > is a palindromic sentence !";
+} else {
+    echo "The sentence < ".$text." > is not a palindromic sentence !";
+}
