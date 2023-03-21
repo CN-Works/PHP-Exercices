@@ -25,7 +25,7 @@ function StringReverse($str)
 
 // Reversed string
 
-$text_reversed = StringReverse($text_initial);
+$text_reversed = strrev($text_initial);
 
 // Result
 
