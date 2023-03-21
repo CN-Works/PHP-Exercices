@@ -1,3 +1,5 @@
+<?php
+
 // Base sentence
 $text = "Our php lesson begins today";
 
