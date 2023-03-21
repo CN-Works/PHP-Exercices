@@ -2,4 +2,4 @@
 </div>
 <br>
 
-**A basic repository with some php exercices I had to work on.**
+**A basic repository with some php exercices I had to work on at school.**
