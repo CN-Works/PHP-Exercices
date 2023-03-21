@@ -1,26 +1,36 @@
 <?php
 
-// Base Sentence in french
+// Base Sentence (here, in french)
+
 $text = "Engage le jeu que je le gagne";
-$base_text = $text;
-$text = strtolower($text);
-$reversed_text='';
 
-// removing space in sentence
-str_replace(" ","",$text);
-echo "reversed : $text \n ";
-$modified_text = $text;
-$reversed_text = $modified_text;
-$cache_letters = "";
+// Preparting Inital base text
 
-// Reversing the sentence
-for($i=strlen($reversed_text);$i>=0;$i--)
+// Lowering the string
+$text_initial = strtolower($text);
+// Removing all the space
+$text_initial = str_replace(" ","",$text_initial);
+
+// String Reverse function
+
+function StringReverse($str)
 {
-    $cache_letters.=$reversed_text[$i];
+    if (strlen($str) <= 1) return $str;
+ 
+    $newstr = '';
+    $newstr .= substr($str,-1).StringReverse(substr($str,0,strlen($str)-1));
+ 
+    return $newstr;
 }
 
-if (strtolower($base_text) == $reversed_text) {
-    echo "The sentence < ".$base_text." > is a palindromic sentence !";
+// Reversed string
+
+$text_reversed = StringReverse($text_initial);
+
+// Result
+
+if ($text_initial == $text_reversed) {
+    echo "The sentence < ".$text." > is a palindromic sentence !";
 } else {
-    echo "The sentence < ".$base_text." > is not a palindromic sentence !";
+    echo "The sentence < ".$text." > is not a palindromic sentence !";
 }
