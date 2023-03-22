@@ -1,17 +1,18 @@
 <?php
 
 // Personnal Data
-$age = 25;
+$age = 45;
 $sex = "m";
 $is_taxable = null;
 
 // Taxable check
-if ($sex == "m" and $age >= 20) {
+if ($sex == "m" && $age >= 20) {
     $is_taxable = true;
-} elseif ($sex == "f" and ($age >= 18 and $age <= 35)) {
+} elseif ($sex == "f" && $age >= 18 && $age <= 35) {
     $is_taxable = true;
 }
 
+// Sending message or not
 if ($is_taxable) {
     echo "This person is taxable.";
 } else {
