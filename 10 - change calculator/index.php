@@ -7,7 +7,7 @@ $banknote_two = 0;
 $banknote_one = 0;
 
 // Scenario Data
-$rest_change = 48;
+$rest_change = 475;
 echo "Amount : ".$rest_change."€ <br>";
 
 // Banknote 10
