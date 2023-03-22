@@ -7,17 +7,16 @@ $banknote_two = 0;
 $banknote_one = 0;
 
 // Scenario Data
-$rest_change = 475;
+$rest_change = 48;
 echo "Amount : ".$rest_change."€ <br>";
 
 // Banknote 10
-if ($rest_change < 10) {
-    echo "<br> Banknote(10) : 0";
-} else {
-    $banknote_ten = floor($rest_change/10);
-    $rest_change = $rest_change % 10;
-    echo "<br> Banknote(10) : ".$banknote_ten;
+
+while ($rest_change >= 10) {
+    $banknote_ten = $banknote_ten + 1;
+    $rest_change = $rest_change - 10;
 }
+echo "<br> Banknote(10) : ".$banknote_ten;
 
 // Banknote 5
 if ($rest_change < 5) {
