@@ -4,15 +4,20 @@
 $age = 11;
 
 // Main comparaison
+$category = null;
 
 if ($age >= 6 and $age <= 7) {
-    echo "L’enfant qui a ".$age." ans appartient à la catégorie « Poussin »";
+    $category = "Poussin";
 } elseif ($age >= 8 and $age <= 9) {
-    echo "L’enfant qui a ".$age." ans appartient à la catégorie « Pupille »";
+    $category = "Pupille";
 } elseif ($age >= 10 and $age <= 11) {
-    echo "L’enfant qui a ".$age." ans appartient à la catégorie « Minime »";
+    $category = "Minime";
 } elseif ($age >= 12) {
-    echo "L’enfant qui a ".$age." ans appartient à la catégorie « Cadet »";
-} else {
+    $category = "Cadet";
+}
+
+if ($category == null) {
     echo "L’enfant qui a ".$age." ans n'appartient à aucune catégorie.";
+} else {
+    echo "L’enfant qui a ".$age." ans appartient à la catégorie « ".$category." »";
 }
