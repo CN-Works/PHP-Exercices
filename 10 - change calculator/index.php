@@ -1,48 +1,47 @@
 <?php
 
+// Banknotes
+$banknote_ten = 0;
+$banknote_five = 0;
+$banknote_two = 0;
+$banknote_one = 0;
+
 // Scenario Data
 $rest_change = 48;
-echo "Amount : ".$rest_change."€";
+echo "Amount : ".$rest_change."€ <br>";
 
 // Banknote 10
 if ($rest_change < 10) {
-    echo "\n\nBanknote(10) : 0";
+    echo "<br> Banknote(10) : 0";
 } else {
     $banknote_ten = floor($rest_change/10);
     $rest_change = $rest_change % 10;
-    echo "\n\nBanknote(10) : ".$banknote_ten;
+    echo "<br> Banknote(10) : ".$banknote_ten;
 }
-
-echo "\nrest :".$rest_change;
 
 // Banknote 5
 if ($rest_change < 5) {
-    echo "\nBanknote(5) : 0";
+    echo "<br> Banknote(5) : 0";
 } else {
     $banknote_five = floor($rest_change/5);
     $rest_change = $rest_change % 5;
-    echo "\nBanknote(5) : ".$banknote_five;
+    echo "<br> Banknote(5) : ".$banknote_five;
 }
-
-echo "\nrest :".$rest_change;
 
 // Coin 2
 if ($rest_change < 2) {
-    echo "\nCoin(2) : 0";
+    echo "<br> Coin(2) : 0";
 } else {
     $banknote_two = floor($rest_change/2);
     $rest_change = $rest_change % 2;
-    echo "\nCoin(2) : ".$banknote_two;
+    echo "<br> Coin(2) : ".$banknote_two;
 }
-
-echo "\nrest :".$rest_change;
 
 // Coin 1
 if ($rest_change < 1) {
-    echo "\nCoin(1) : 0";
+    echo "<br> Coin(1) : 0";
 } else {
     $banknote_one = floor($rest_change/1);
-    echo "\nCoin(1) : ".$banknote_one;
+    $rest_change = $rest_change % 1;
+    echo "<br> Coin(1) : ".$banknote_one;
 }
-
-echo "\nrest :".$rest_change;
