@@ -13,7 +13,7 @@ $users = array(
     "Damien" => "EN",
     "Arnaud" => "FR",
     "Giancarlo" => "ES",
-    "Emma" => "IT", 
+    "Emma" => "IT",
 );
 
 // Saying-Hello function
