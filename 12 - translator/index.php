@@ -16,7 +16,7 @@ $users = array(
     "Emma" => "IT", 
 );
 
-// Hello function
+// Saying-Hello function
 function SayHelloFromLanguage($username, $language,$locales) {
     echo "<br>".$locales[$language]." ".$username." !";
 }
