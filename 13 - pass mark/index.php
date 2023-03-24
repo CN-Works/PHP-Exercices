@@ -10,7 +10,7 @@ function ShowPassMarkFromArray($list) {
         $total += $grade;
     }
     $total = $total / count($list);
-    echo "<br>Moyenne : ".number_format($total, 2,".","");
+    return "<br>Moyenne : ".number_format($total, 2,".","");
 }
 
 function ShowGradesMessageFromGrades($grades) {
@@ -18,7 +18,7 @@ function ShowGradesMessageFromGrades($grades) {
     foreach ($grades as $number) {
         $text = $text." ".$number;
     }
-    echo $text;
+    return $text;
 }
 
 // Printing Grades & Pass Mark
