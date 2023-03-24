@@ -18,5 +18,9 @@ $users = array(
 
 // Hello function
 function SayHelloFromLanguage($username, $language) {
-    
+    echo "<br>".$locales[$language]." ".$username." !";
+}
+
+foreach ($user as $name => $language) {
+    echo SayHelloFromLanguage($name,$language);
 }
