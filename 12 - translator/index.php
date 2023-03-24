@@ -6,7 +6,7 @@ $locales = array(
     "EN" => "Hello",
     "ES" => "Holà",
     "IT" => "Ciao",
-)
+);
 
 // Users and their language
 $users = array(
@@ -14,14 +14,14 @@ $users = array(
     "Arnaud" => "FR",
     "Giancarlo" => "ES",
     "Emma" => "IT", 
-)
+);
 
 // Hello function
-function SayHelloFromLanguage($username, $language) {
+function SayHelloFromLanguage($username, $language,$locales) {
     echo "<br>".$locales[$language]." ".$username." !";
 }
 
 // Loop for printing
-foreach ($user as $name => $language) {
-    echo SayHelloFromLanguage($name,$language);
+foreach ($users as $name => $language) {
+    echo SayHelloFromLanguage($name,$language,$locales);
 }
