@@ -15,13 +15,17 @@ function ShowPassMarkFromArray($list) {
 
 function ShowGradesMessageFromGrades($grades) {
     $text = "Students have obtained these grades :";
+    echo "<br>";
     foreach ($grades as $number) {
-        $text = $text." ".$number;
+        $text = $text." <br>- ".$number;
     }
     return $text;
 }
 
 // Printing Grades & Pass Mark
 echo ShowGradesMessageFromGrades($grades);
+
+// Spacing
+echo "<br>";
 
 echo ShowPassMarkFromArray($grades);
