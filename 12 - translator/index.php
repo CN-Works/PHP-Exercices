@@ -23,5 +23,5 @@ function SayHelloFromLanguage($username, $language,$locales) {
 
 // Loop for printing
 foreach ($users as $name => $language) {
-    echo SayHelloFromLanguage($name,$language,$locales);
+    SayHelloFromLanguage($name,$language,$locales);
 }
