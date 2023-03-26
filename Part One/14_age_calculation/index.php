@@ -2,14 +2,11 @@
 
 // Default dates
 $originaldate = "17-01-1985";
-$todaysdate = date("d-m-Y");
+$date = $originaldate;
 
-// Converting to date format
-$date = create_date($originaldate);
-$todaysdate = create_date($todaysdate);
-
+// Converting to date format and
 // Calc. Difference
-$result = date_diff($date,$todaysdate);
+$result = date_diff(create_date($date),create_date(date("d-m-y")));
 
 // Printing result
-echo "You were born on ".$originaldate." !";
+echo "You were born on !";
