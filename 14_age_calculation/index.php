@@ -6,8 +6,11 @@ $date = "17-01-1985";
 $today = date("d-m-Y");
 
 // Converting
-$date = create_date($date)
-$today = create_date($today)
+$date = create_date($date);
+$today = create_date($today);
 
+// Calc. Difference
 
-echo $today;
+$result = date_diff($date,$today);
+
+echo $result;
