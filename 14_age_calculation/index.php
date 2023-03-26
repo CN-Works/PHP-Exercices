@@ -2,6 +2,9 @@
 
 // Default age
 
-$date,$today = "17-01-1985",date("d-m-Y");
+$date = "17-01-1985";
+$today = date("d-m-Y");
+
+// Converting
 
 echo $today;
