@@ -15,14 +15,14 @@ function showCountryCapitalesFromArray($capitals) {
         // Opening
         $result = "<table><tr><th>Country</th><th>Capital</th></tr></>";
 
-        // Loop part
-
+        // Adding every Key and Value to the table
         $temp_text = "";
         foreach ($capitals as $country => $capital) {
+            // Upper case for country name
             $temp_text = $temp_text."<tr><td>".strtoupper($country)."</td><td>".$capital."</td></tr>";
         }
 
-        // Return result
+        // Return result and closing table
         $result = $result."".$temp_text."</table>";
         return $result;
     } else {
