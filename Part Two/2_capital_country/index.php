@@ -1,7 +1,7 @@
 <?php
 
 // Default array
-$capitales = array(
+$capitals = array(
     "France" => "Paris",
     "Germany" => "Berlin",
     "USA" => "Washington",
@@ -9,13 +9,13 @@ $capitales = array(
 );
 
 // Main function using an array
-function showCountryCapitalesFromArray($capitales) {
-    if (gettype($capitales) == "array") {
-        return "This is an array with ".count($capitales)." countries !";
+function showCountryCapitalesFromArray($capitals) {
+    if (gettype($capitals) == "array") {
+        return "This is an array with ".count($capitals)." countries and capitals!";
     } else {
-        return "Your input is not an array !";
+        return "Your input is not an array, baka !";
     }
 };
 
 // Print result
-echo showCountryCapitalesFromArray("test");
+echo showCountryCapitalesFromArray($capitals);
