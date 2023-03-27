@@ -1,7 +1,7 @@
 <?php
 
 // Base data
-$formlist = array("Nom","Prénom","Ville");
+$formlist = array("Firstname","Lastname","City","Car","Job");
 
 // Main function
 function generateFormFromArray($forms) {
