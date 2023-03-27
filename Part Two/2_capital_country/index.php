@@ -5,7 +5,8 @@ $capitals = array(
     "France" => "Paris",
     "Germany" => "Berlin",
     "USA" => "Washington",
-    "Italie" => "Rome",
+    "Italy" => "Rome",
+    "Romania" => "Bucharest";
 );
 
 // Main function using an array
