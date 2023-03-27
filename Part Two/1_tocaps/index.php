@@ -11,6 +11,7 @@ function toLowerRed($text) {
         // the text text needs to be red
         return "<p style='color : red;'>".$text."</p>";
     } else {
+        // returns when input is not a string
         return "Your input is not a string !";
     }
 }
