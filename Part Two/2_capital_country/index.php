@@ -13,18 +13,17 @@ $capitals = array(
 function showCountryCapitalesFromArray($capitals) {
     if (gettype($capitals) == "array") {
         // Opening
-        $result = "<table> <tr> <th>Country</th> <th>Capital</th> </tr> </>";
+        $result = "<table><tr><th>Country</th><th>Capital</th></tr></>";
 
         // Loop part
 
-        $temp_text = "<tr> ";
+        $temp_text = "";
         foreach ($capitals as $country => $capital) {
-            $temp_text = $temp_text."<td>".strtoupper($country)."</td> <td>".$capital."</td>";
+            $temp_text = $temp_text."<tr><td>".strtoupper($country)."</td><td>".$capital."</td></tr>";
         }
-        $temp_text = $temp_text."</tr>";
 
         // Return result
-        $result = $result."</table>";
+        $result = $result."".$temp_text."</table>";
         return $result;
     } else {
         return "Your input is not an array, baka !";
