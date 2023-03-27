@@ -14,7 +14,7 @@ function generateFormFromArray($forms) {
 
     // generating the input
     foreach ($forms as $label) {
-        $result = $result."<label for='text'>".$result."</label><br>";
+        $result = $result."<label for='text'>".$result."</label><br><input type='text' id='fname' name='fname'><br>";
     }
     
     // Closing form and returning
