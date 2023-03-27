@@ -16,7 +16,9 @@ function generateFormFromArray($forms) {
     foreach ($forms as $label) {
         $result = $result."<label for='text'>".$result."</label><br>";
     }
-    return $result;
+    
+    // Closing form and returning
+    return $result.."</form>";
 }
 
 // Final print
