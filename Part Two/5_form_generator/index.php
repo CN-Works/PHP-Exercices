@@ -9,4 +9,15 @@ function generateFormFromArray($forms) {
     if (gettype($forms) != "array") {
         return "Your input is not an array !";
     }
+    //
+    $result = "<form>";
+
+    // generating the input
+    foreach ($forms as $label) {
+        $result = $result."<label for='text'>".$result."</label><br>";
+    }
+    return $result;
 }
+
+// Final print
+echo generateFormFromArray($formlist);
