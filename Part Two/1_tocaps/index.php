@@ -1,7 +1,7 @@
 <?php
 
 // Default input
-$text = "my default lower case text";
+$text = "my default cool text";
 
 function toLowerRed($text) {
     if (gettype($text) == "string") {
