@@ -18,7 +18,7 @@ function generateFormFromArray($forms) {
     }
     
     // Closing form and returning
-    return $result.."</form>";
+    return $result."</form>";
 }
 
 // Final print
