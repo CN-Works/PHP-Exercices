@@ -10,7 +10,7 @@ $capitales = array(
 
 // Main function using an array
 function showCountryCapitalesFromArray($capitales) {
-    if (gettype($text) == "array") {
+    if (gettype($capitales) == "array") {
         return "This is an array with ".count($capitales)." countries !";
     } else {
         return "Your input is not an array !";
