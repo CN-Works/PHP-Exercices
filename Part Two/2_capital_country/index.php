@@ -6,7 +6,7 @@ $capitals = array(
     "Germany" => "Berlin",
     "USA" => "Washington",
     "Italy" => "Rome",
-    "Romania" => "Bucharest";
+    "Romania" => "Bucharest",
 );
 
 // Main function using an array
