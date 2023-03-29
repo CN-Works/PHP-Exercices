@@ -14,9 +14,9 @@ function showImageFromLink($link,$repeat) {
     // result var
     $result = "";
 
-    // main loop
+    // main loop & style (width)
     for ($i = 1; $i <= $repeat; $i++) {
-        $result =  $result."<br> <img src='".$link."' alt='A cool spongebob image focused on his face'>";
+        $result =  $result."<br> <img src='".$link."' alt='A cool spongebob image focused on his face' style='width: 150px;'>";
     }
 
     return $result;
