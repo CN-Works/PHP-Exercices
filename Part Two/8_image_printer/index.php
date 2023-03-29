@@ -7,7 +7,7 @@ $imagelink = "https://images5.fanpop.com/image/photos/28800000/spongebob-spongeb
 
 function showImageFromLink($link,$repeat) {
     // Checking if inputs are correct
-    if (not gettype($link) == "string" && not gettype($repeat) == "integer") {
+    if (gettype($link) != "string" && gettype($repeat) != "integer") {
         return "Your input are not correct !";
     }
 
@@ -15,8 +15,8 @@ function showImageFromLink($link,$repeat) {
     $result = "";
 
     // main loop
-    for ($i = 1; $i <= 10; $i++) {
-        $result =  $result."<br>".$i;
+    for ($i = 1; $i <= $repeat; $i++) {
+        $result =  $result."<br> <img src="$link" alt='A cool spongebob image focused on his face'>";
     }
 
     return $result;
