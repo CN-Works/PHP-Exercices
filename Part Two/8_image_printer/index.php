@@ -16,7 +16,7 @@ function showImageFromLink($link,$repeat) {
 
     // main loop
     for ($i = 1; $i <= $repeat; $i++) {
-        $result =  $result."<br> <img src='"$link"' alt='A cool spongebob image focused on his face'>";
+        $result =  $result."<br> <img src='".$link."' alt='A cool spongebob image focused on his face'>";
     }
 
     return $result;
