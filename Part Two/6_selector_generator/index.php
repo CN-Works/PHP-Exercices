@@ -13,7 +13,7 @@ $elements = array(
 
 function showSelectorFromList($list) {
     // Opening selection menu
-    $result = "<label for='food-select'>Choose an extra :</label> <select name='extra-selector'>";
+    $result = "<label for='food-select'>Choose an extra :</label> <br> <select name='extra-selector'>";
 
     // Adding a "none" option as default.
     $result = $result." <option value='default'>None</option>";
@@ -31,4 +31,4 @@ function showSelectorFromList($list) {
 
 // Print result
 
-showSelectorFromList($elements);
+echo showSelectorFromList($elements);
