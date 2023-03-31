@@ -18,7 +18,7 @@ function showRadioSelectionFromList($list) {
     $result = "<form> ";
 
     foreach ($list as $item) {
-        $result = $result."<input type='radio name='sex-selector'><label>".$item."</label><br>";
+        $result = $result."<input type='radio' name='sex-selector'><label>".$item."</label><br>";
     }
 
     // closing form
