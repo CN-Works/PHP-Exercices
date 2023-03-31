@@ -19,7 +19,7 @@ $available_course = array(
 $needed_textdata = array(
     "Lastname",
     "Firstname",
-    "email",
+    "Email",
     "City",
 );
 
@@ -73,7 +73,7 @@ function showTextInputFromList($list) {
     $result = "<form>";
     
     foreach ($list as $item) {
-        $result = $result."<label>".$item." :</label> <input type='text'>";
+        $result = $result."<label>".$item." :</label> <br> <input type='text'><br>";
     }
 
     // Closing form
@@ -81,3 +81,10 @@ function showTextInputFromList($list) {
 
     return $result;
 }
+
+// Final
+echo "<h1 style='color: orange;'>Creating an account at Elan !</h1>";
+echo showTextInputFromList($needed_textdata);
+echo "<p style='color: brown;'>Please select your sex !</p>".showRadioSelectionFromList($available_sex);
+echo "<p style='color: brown;'>Please choose a course !</p>".showSelectorFromList($available_course);
+echo "<br><br><input type='submit' value='Submit'>";
