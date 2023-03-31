@@ -15,10 +15,16 @@ function showRadioSelectionFromList($list) {
         return "Your input list is not an array, please try again.";
     }
     // base
-    $result = "";
+    $result = "<form> ";
+
+    // closing form
+    $result = $result."</form>";
 
     return $result;
 }
+
+// Just printing an H1 for design
+echo "<h1>Exercice n°9 : Sex-selector</h1>";
 
 // Print result
 echo showRadioSelectionFromList($elements) ;
