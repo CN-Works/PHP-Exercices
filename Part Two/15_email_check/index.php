@@ -9,7 +9,7 @@ function checkingEmailFromInput($input) {
 }
 
 // Printing result
-if checkingEmailFromInput($email) {
+if (checkingEmailFromInput($email)) {
     echo '"'.$email.'" is a valid email address !';
 } else {
     echo '"'.$email.'" is not a valid email address !';
