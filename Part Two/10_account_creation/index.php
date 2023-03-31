@@ -16,9 +16,16 @@ $available_course = array(
     "Back-end developer",
 );
 
+$needed_textdata = array(
+    "Lastname",
+    "Firstname",
+    "email",
+    "City",
+);
+
 /* All UI Functions */
 
-// Generation function
+// Radio-list function
 function showRadioSelectionFromList($list) {
     // As always, checking inputs
     if (gettype($list) != "array") {
@@ -52,6 +59,23 @@ function showSelectorFromList($list) {
 
     // closing selection menu
     $result = $result."</select>";
+
+    return $result;
+}
+
+// Text-input function
+function showTextInputFromList($list) {
+    // As always, checking inputs
+    if (gettype($list) != "array") {
+        return "Your input list is not an array, please try again.";
+    }
+    // base
+    $result = "<form>";
+
+
+
+    // Closing form
+    $result = $result."</form>";
 
     return $result;
 }
