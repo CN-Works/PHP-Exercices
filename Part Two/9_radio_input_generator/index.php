@@ -28,7 +28,7 @@ function showRadioSelectionFromList($list) {
 }
 
 // Just printing an H1 for design
-echo "<h1>Exercice n°9 : Sex-selector</h1>";
+echo "<h1>Please select your sex, or choose unspecified !</h1>";
 
 // Print result
 echo showRadioSelectionFromList($elements) ;
