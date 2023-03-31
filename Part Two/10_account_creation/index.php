@@ -71,8 +71,10 @@ function showTextInputFromList($list) {
     }
     // base
     $result = "<form>";
-
-
+    
+    foreach ($list as $item) {
+        $result = $result."<label>".$item." :</label> <input type='text'>";
+    }
 
     // Closing form
     $result = $result."</form>";
