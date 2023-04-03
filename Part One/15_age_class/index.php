@@ -16,11 +16,16 @@ class Person {
         $this->dob = $dob;
     }
 
-    public function __toString() {
+    public function computeAge() {
         // Age diff
         $age = date_diff(date_create($this->dob),date_create(date("d-m-y")));
+        $year = $age->format("%y");
+        return $year;
+    }
+
+    public function __toString() {
         // returning a basic sentence
-        return $this->firstname." ".$this->lastname." is ".$age->format("%y")." year old.";
+        return $this->firstname." ".$this->lastname." is ".$this->computeAge()." year old.";
     }
 }
 
