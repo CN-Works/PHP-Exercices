@@ -24,8 +24,8 @@ class Person {
     }
 }
 
-$p1 = new Person("John","Doe","1980-02-19")
-$p2 = new Person("Johanna","Doe","1985-01-17")
+$p1 = new Person("John","Doe","1980-02-19");
+$p2 = new Person("Johanna","Doe","1985-01-17");
 
 // Final print
 echo $p1."<br>".$p2;
