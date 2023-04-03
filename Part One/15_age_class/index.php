@@ -20,7 +20,7 @@ class Person {
         // Age diff
         $age = date_diff(date_create($this->dob),date_create(date("d-m-y")));
         // returning a basic sentence
-        return $this->firstname." ".$this->lastname." is ".$age->format("%y year old.");
+        return $this->firstname." ".$this->lastname." is ".$age->format("%y")." year old.";
     }
 }
 
