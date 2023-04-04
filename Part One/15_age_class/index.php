@@ -9,13 +9,14 @@ class Person {
     // Date of birth
     protected string $dob;
 
-    // Constructor
+    // Constructor / adds arguments
     public function __construct(string $firstname, string $lastname, string $dob) {
         $this->firstname = $firstname;
         $this->lastname = $lastname;
         $this->dob = $dob;
     }
 
+    // returns age in years
     public function computeAge() {
         // Age diff
         $age = date_diff(date_create($this->dob),date_create(date("d-m-y")));
@@ -23,6 +24,7 @@ class Person {
         return $year;
     }
 
+    // returns a string when object is printed
     public function __toString() {
         // returning a basic sentence
         return $this->firstname." ".$this->lastname." is ".$this->computeAge()." year old.";
