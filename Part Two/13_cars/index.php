@@ -2,7 +2,7 @@
 
 // Main vehicle class
 
-class Car {
+class vehicleCar {
     // Basic information about the car
 
     protected string $brand;
@@ -26,6 +26,11 @@ class Car {
         $this->maxSpeed = $maxspeed;
     }
 
+    // Returns a presentation text (for fun)
+    public function __toString() {
+        return "This car is ".$this->model." made by ".$this->brand." !";
+    }
+
     // returns an array with all car information
     public function getCarData() {
         $car_data = array(
@@ -35,7 +40,11 @@ class Car {
             "maxspeed" => $this->maxSpeed,
             "engineStatus" => $this->isEngineOn;
             "actualSpeed" => $this->actualSpeed;
-        )
+        );
         return $car_data;
     }
 }
+
+$porsche = new vehicleCar("Porsche","911 Turbo S", 2, 295)
+
+echo $porsche;
