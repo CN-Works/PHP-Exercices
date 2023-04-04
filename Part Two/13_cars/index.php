@@ -51,9 +51,9 @@ class vehicleCar {
         if ($wantedStatus != $status) {
             $this->isEngineOne = $wantedStatus;
             if ($wantedStatus == true) {
-                echo $this->model."'s engine is now started !";
+                echo $this->model."'s engine has started !";
             } else {
-                echo $this->model."'s engine is now off !";
+                echo $this->model."'s engine is turned off !";
             }
         } else {
             // This way Engine can't be started if it's already started
