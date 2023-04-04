@@ -43,6 +43,18 @@ class vehicleCar {
         );
         return $carData;
     }
+
+    public function changeEngineStatus($wantedStatus) {
+        $status = $this->$isEngineOn;
+
+        // Checking if status is the same
+        if ($wantedStatus != $status) {
+            $this->isEngineOne = $wantedStatus;
+        } else {
+            // This way Engine can't be started if it's already started
+            echo "Can't update this engine status : ".$wantedStatus;
+        }
+    }
 }
 
 $porsche = new vehicleCar("Porsche","911 Turbo S", 2, 295);
