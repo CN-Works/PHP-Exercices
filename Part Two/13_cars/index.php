@@ -2,7 +2,7 @@
 
 // Main vehicle class
 
-class vehicleCar {
+class Car {
     // Basic information about the car
 
     protected string $brand;
@@ -62,6 +62,6 @@ class vehicleCar {
     }
 }
 
-$porsche = new vehicleCar("Porsche","911 Turbo S", 2, 295);
+$porsche = new Car("Porsche","911 Turbo S", 2, 295);
 
 echo $porsche;
