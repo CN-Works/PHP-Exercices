@@ -5,17 +5,17 @@
 class Car {
     // Basic information about the car
 
-    protected string $brand;
-    protected string $model;
-    protected int $doors;
+    private string $brand;
+    private string $model;
+    private int $doors;
     // max speed for speed generation
-    protected int $maxSpeed;
+    private int $maxSpeed;
 
     // Car status
 
-    protected bool $isEngineOn = false;
+    private bool $isEngineOn = false;
     // speed in km/h
-    protected int $actualSpeed = 0;
+    private int $actualSpeed = 0;
 
     // Arguments for class creation
     public function __construct(string $brand, string $model, int $doors, int $maxspeed) {
