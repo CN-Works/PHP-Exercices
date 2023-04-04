@@ -44,7 +44,7 @@ class vehicleCar {
         return $carData;
     }
 
-    public function changeEngineStatus($wantedStatus) {
+    public function updateEngineStatus($wantedStatus) {
         $status = $this->$isEngineOn;
 
         // Checking if status is the same
