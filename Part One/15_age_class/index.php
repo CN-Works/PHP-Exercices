@@ -31,6 +31,7 @@ class Person {
     }
 }
 
+// Creating entities (for tests)
 $p1 = new Person("John","Doe","1980-02-19");
 $p2 = new Person("Johanna","Doe","1985-01-17");
 
