@@ -45,10 +45,10 @@ class Car {
     }
 
     public function updateEngineStatus($wantedStatus) {
-        $status = $this->$isEngineOn;
+        $status = $this->isEngineOn;
 
         // Checking if status is the same
-        if ($wantedStatus != $status) {
+        if ($wantedStatus !== $status) {
             $this->isEngineOne = $wantedStatus;
             if ($wantedStatus == true) {
                 echo $this->model."'s engine has started !";
@@ -66,4 +66,7 @@ $porsche = new Car("Porsche","911 Turbo S", 2, 295);
 
 echo $porsche;
 echo "<br>";
-var_dump($porsche->getCarData());
+$porsche->updateEngineStatus(true);
+echo "<br>";
+sleep(50);
+$porsche->updateEngineStatus(true);
