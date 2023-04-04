@@ -28,7 +28,7 @@ class vehicleCar {
 
     // Returns a presentation text (for fun)
     public function __toString() {
-        return "This car is a".$this->model." made by ".$this->brand." !";
+        return "This car is a ".$this->model." made by ".$this->brand." !";
     }
 
     // returns an array with all car information
