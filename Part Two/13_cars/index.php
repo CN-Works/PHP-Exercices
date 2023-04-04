@@ -28,23 +28,23 @@ class vehicleCar {
 
     // Returns a presentation text (for fun)
     public function __toString() {
-        return "This car is ".$this->model." made by ".$this->brand." !";
+        return "This car is a".$this->model." made by ".$this->brand." !";
     }
 
     // returns an array with all car information
     public function getCarData() {
-        $car_data = array(
+        $carData = array(
             "brand" => $this->brand,
             "model" => $this->model,
             "doors" => $this->doors,
-            "maxspeed" => $this->maxSpeed,
-            "engineStatus" => $this->isEngineOn;
-            "actualSpeed" => $this->actualSpeed;
+            "maxSpeed" => $this->maxSpeed,
+            "engineStatus" => $this->isEngineOn,
+            "actualSpeed" => $this->actualSpeed,
         );
-        return $car_data;
+        return $carData;
     }
 }
 
-$porsche = new vehicleCar("Porsche","911 Turbo S", 2, 295)
+$porsche = new vehicleCar("Porsche","911 Turbo S", 2, 295);
 
 echo $porsche;
