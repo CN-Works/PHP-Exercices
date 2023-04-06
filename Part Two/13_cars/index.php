@@ -109,7 +109,7 @@ $porsche->pressGasOrBrake("brake");
 
 /*
 
-Documentation :
+Documentation - Usage :
 
 Engine |
 start engine - vehicle->updateEngineStatus(true);
