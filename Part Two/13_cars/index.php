@@ -49,7 +49,7 @@ class Car {
         // Checking if status is the same
         if ($wantedStatus === $status) {
             // This way Engine can't be started if it's already started
-            if ($wantedStatus === true) {
+            if $wantedStatus {
                 echo "Can't update this engine status, it's already running !";
             } else {
                 echo "Can't update this engine status, it's already turned off !";
@@ -58,9 +58,9 @@ class Car {
             // Changing engine state
             $this->isEngineOn = $wantedStatus;
             // Just checking message
-            if ($wantedStatus == true) {
+            if $wantedStatus {
                 echo "The ".$this->model." 's engine has started !";
-            } elseif ($wantedStatus == false) {
+            } else {
                 echo "The ".$this->model." 's engine is turned off !";
             }
         }
