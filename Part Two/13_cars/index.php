@@ -13,7 +13,7 @@ class Car {
 
     // Car status
 
-    public bool $isEngineOn = false;
+    private bool $isEngineOn = false;
     // speed in km/h
     private int $actualSpeed = 0;
 
@@ -64,6 +64,8 @@ class Car {
             }
         }
     }
+
+
 }
 
 $porsche = new Car("Porsche","911 Turbo S", 2, 295);
