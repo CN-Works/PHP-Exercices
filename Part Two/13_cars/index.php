@@ -8,8 +8,6 @@ class Car {
     private string $brand;
     private string $model;
     private int $doors;
-    // max speed for speed generation
-    private int $maxSpeed;
 
     // Car status
 
@@ -18,12 +16,11 @@ class Car {
     private int $actualSpeed = 0;
 
     // Arguments for class creation
-    public function __construct(string $brand, string $model, int $doors, int $maxspeed) {
+    public function __construct(string $brand, string $model, int $doors) {
         // settings properties
         $this->brand = $brand;
         $this->model = $model;
         $this->doors = $doors;
-        $this->maxSpeed = $maxspeed;
     }
 
     // Returns a presentation text (for fun)
@@ -37,7 +34,6 @@ class Car {
             "brand" => $this->brand,
             "model" => $this->model,
             "doors" => $this->doors,
-            "maxSpeed" => $this->maxSpeed,
             "engineStatus" => $this->isEngineOn,
             "actualSpeed" => $this->actualSpeed,
         );
@@ -56,19 +52,31 @@ class Car {
                 echo "Can't update this engine status, it's already turned off !";
             }
         } else {
+            // Changing engine state
             $this->isEngineOn = $wantedStatus;
+            // Just checking message
             if ($wantedStatus == true) {
                 echo $this->model."'s engine has started !";
             } elseif ($wantedStatus == false) {
                 echo $this->model."'s engine is turned off !";
             }
         }
+
+        public function pressGasOrBrake(string $action) {
+            // Checking if engine is running
+            if ($this->isEngineOn !== true) {
+                echo "The engine is not running, you need to start it before doing anything !";
+                return
+            }
+
+
+        }
     }
 
 
 }
 
-$porsche = new Car("Porsche","911 Turbo S", 2, 295);
+$porsche = new Car("Porsche","911 Turbo S", 2);
 
 echo $porsche;
 echo "<br> ----- <br>";
