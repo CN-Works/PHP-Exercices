@@ -67,7 +67,7 @@ class Car {
         // Checking if engine is running
         if ($this->isEngineOn !== true) {
             echo "The engine is not running, you need to start it before doing anything !";
-            return
+            return;
         }
 
         // The car will only go to 50kmh & 0kmh
