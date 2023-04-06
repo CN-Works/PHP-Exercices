@@ -66,7 +66,7 @@ class Car {
         }
     }
 
-    public function pressGasOrBrake(string $action) {
+    public function pressThrottleOrBrake(string $action) {
         // Checking if engine is running
         if ($this->isEngineOn !== true) {
             echo "The engine is not running, you need to start it before doing anything !";
@@ -74,7 +74,7 @@ class Car {
         }
 
         // The car will only go to 50kmh & 0kmh
-        if ($action == "gas") {
+        if ($action == "throttle") {
             if ($this->actualSpeed < 50) {
                 $this->actualSpeed = 50;
                 echo "The ".$this->model." is going faster ! (50kmh)";
@@ -100,11 +100,11 @@ $porsche = new Car("Porsche","911 GT3 RS", 2);
 echo "<br> ----- <br>";
 $porsche->updateEngineStatus(true);
 echo "<br> ----- <br>";
-$porsche->pressGasOrBrake("gas");
+$porsche->pressThrottleOrBrake("throttle");
 echo "<br> ----- <br>";
-$porsche->pressGasOrBrake("gas");
+$porsche->pressThrottleOrBrake("throttle");
 echo "<br> ----- <br>";
-$porsche->pressGasOrBrake("brake");
+$porsche->pressThrottleOrBrake("brake");
 
 
 /*
@@ -115,8 +115,8 @@ Engine |
 start engine - vehicle->updateEngineStatus(true);
 turn off engine - vehicle->updateEngineStatus(false);
 
-Speed/Gas&Brake |
-Accelerate - vehicle->pressGasOrBrake("gas");
-Deccelerate - vehicle->pressGasOrBrake("brake");
+Speed/Throttle&Brake |
+Accelerate - vehicle->pressThrottleOrBrake("throttle");
+Deccelerate - vehicle->pressThrottleOrBrake("brake");
 
 */
