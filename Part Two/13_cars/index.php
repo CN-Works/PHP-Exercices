@@ -61,33 +61,32 @@ class Car {
                 echo $this->model."'s engine is turned off !";
             }
         }
+    }
 
-        public function pressGasOrBrake(string $action) {
-            // Checking if engine is running
-            if ($this->isEngineOn !== true) {
-                echo "The engine is not running, you need to start it before doing anything !";
-                return
+    public function pressGasOrBrake(string $action) {
+        // Checking if engine is running
+        if ($this->isEngineOn !== true) {
+            echo "The engine is not running, you need to start it before doing anything !";
+            return
+        }
+
+        // The car will only go to 50kmh & 0kmh
+        if ($action == "gas") {
+            if ($this->actualSpeed == 0) {
+                $this->actualSpeed = 50;
+                echo "The ".$this->model." is going faster ! (50kmh)";
+            } else {
+                echo "You can't go faster because you are already driving at 50kmh !";
             }
-
-            // The car will only go to 50kmh & 0kmh
-            if ($action == "gas") {
-                if ($this->actualSpeed == 0) {
-                    $this->actualSpeed = 50;
-                    echo "The ".$this->model." is going faster ! (50kmh)";
-                } else {
-                    echo "You can't go faster because you are already driving at 50kmh !";
-                }
-            } elseif ($action == "brake") {
-                if ($this->actualSpeed >= 0) {
-                    $this->actualSpeed = 0;
-                    echo "The ".$this->model." is slowing down ! (0kmh)";
-                } else {
-                    echo "You can't go slower because you are not driving !";
-                }
+        } elseif ($action == "brake") {
+            if ($this->actualSpeed >= 0) {
+                $this->actualSpeed = 0;
+                echo "The ".$this->model." is slowing down ! (0kmh)";
+            } else {
+                echo "You can't go slower because you are not driving !";
             }
         }
     }
-
 
 }
 
@@ -95,6 +94,6 @@ $porsche = new Car("Porsche","911 Turbo S", 2);
 
 echo $porsche;
 echo "<br> ----- <br>";
-$porsche->updateEngineStatus(true);
+$porsche->pressGasOrBrake("gas");
 echo "<br> ----- <br>";
-$porsche->updateEngineStatus(true);
+//$porsche->updateEngineStatus(true);
