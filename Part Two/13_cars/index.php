@@ -59,9 +59,9 @@ class Car {
             $this->isEngineOn = $wantedStatus;
             // Just checking message
             if ($wantedStatus == true) {
-                echo $this->model."'s engine has started !";
+                echo "The ".$this->model." 's engine has started !";
             } elseif ($wantedStatus == false) {
-                echo $this->model."'s engine is turned off !";
+                echo "The ".$this->model." 's engine is turned off !";
             }
         }
     }
