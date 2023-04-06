@@ -69,6 +69,14 @@ class Car {
                 return
             }
 
+            // The car will only go to 50kmh & 0kmh
+            if ($this->actualSpeed >= 0) {
+                $this->actualSpeed = 0;
+                echo "The ".$this->model." is slowing down ! (0kmh)";
+            } elseif ($this->actualSpeed == 0) {
+                $this->actualSpeed = 50;
+                echo "The ".$this->model." is going faster ! (50kmh)";
+            }
 
         }
     }
