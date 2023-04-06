@@ -13,7 +13,7 @@ class Car {
 
     // Car status
 
-    private bool $isEngineOn = false;
+    public bool $isEngineOn = false;
     // speed in km/h
     private int $actualSpeed = 0;
 
@@ -48,16 +48,20 @@ class Car {
         $status = $this->isEngineOn;
 
         // Checking if status is the same
-        if ($wantedStatus !== $status) {
-            $this->isEngineOne = $wantedStatus;
-            if ($wantedStatus == true) {
-                echo $this->model."'s engine has started !";
+        if ($wantedStatus === $status) {
+            // This way Engine can't be started if it's already started
+            if ($wantedStatus === true) {
+                echo "Can't update this engine status, it's already running !";
             } else {
-                echo $this->model."'s engine is turned off !";
+                echo "Can't update this engine status, it's already turned off !";
             }
         } else {
-            // This way Engine can't be started if it's already started
-            echo "Can't update this engine status : ".$wantedStatus;
+            $this->isEngineOn = $wantedStatus;
+            if ($wantedStatus == true) {
+                echo $this->model."'s engine has started !";
+            } elseif ($wantedStatus == false) {
+                echo $this->model."'s engine is turned off !";
+            }
         }
     }
 }
@@ -65,8 +69,7 @@ class Car {
 $porsche = new Car("Porsche","911 Turbo S", 2, 295);
 
 echo $porsche;
-echo "<br>";
+echo "<br> ----- <br>";
 $porsche->updateEngineStatus(true);
-echo "<br>";
-sleep(50);
+echo "<br> ----- <br>";
 $porsche->updateEngineStatus(true);
