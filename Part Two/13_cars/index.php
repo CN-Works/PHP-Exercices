@@ -21,6 +21,9 @@ class Car {
         $this->brand = $brand;
         $this->model = $model;
         $this->doors = $doors;
+
+        // Printing Creation data
+        echo "A new car is created : it's a ".$brand." ".$model." (".$doors." doors)";
     }
 
     // Returns a presentation text (for fun)
@@ -92,7 +95,6 @@ class Car {
 
 $porsche = new Car("Porsche","911 Turbo S", 2);
 
-echo $porsche;
 echo "<br> ----- <br>";
 $porsche->updateEngineStatus(true);
 echo "<br> ----- <br>";
