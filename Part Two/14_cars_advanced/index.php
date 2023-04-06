@@ -49,7 +49,7 @@ class ElectricCar extends Car {
 
     // Return basic information about the car
     public function getInformation() {
-        echo "This electric car is a ".$this->model." ".$this->brand." with ".$this->autonomy."kmh of autonomy.";
+        echo "This electric car is a ".$this->brand." ".$this->model." with ".$this->autonomy."kmh of autonomy.";
     }
 }
 
