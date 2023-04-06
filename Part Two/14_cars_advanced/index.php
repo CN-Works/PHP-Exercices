@@ -12,7 +12,7 @@ class Car {
         $this->model = $model;
 
         // Printing Creation data
-        echo "A new car is created : it's a ".$brand." ".$model!.".";
+        echo "A new car is created : it's a ".$brand." ".$model.".";
     }
 
     // Returns a presentation text (for fun)
