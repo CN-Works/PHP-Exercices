@@ -70,14 +70,21 @@ class Car {
             }
 
             // The car will only go to 50kmh & 0kmh
-            if ($this->actualSpeed >= 0) {
-                $this->actualSpeed = 0;
-                echo "The ".$this->model." is slowing down ! (0kmh)";
-            } elseif ($this->actualSpeed == 0) {
-                $this->actualSpeed = 50;
-                echo "The ".$this->model." is going faster ! (50kmh)";
+            if ($action == "gas") {
+                if ($this->actualSpeed == 0) {
+                    $this->actualSpeed = 50;
+                    echo "The ".$this->model." is going faster ! (50kmh)";
+                } else {
+                    echo "You can't go faster because you are already driving at 50kmh !";
+                }
+            } elseif ($action == "brake") {
+                if ($this->actualSpeed >= 0) {
+                    $this->actualSpeed = 0;
+                    echo "The ".$this->model." is slowing down ! (0kmh)";
+                } else {
+                    echo "You can't go slower because you are not driving !";
+                }
             }
-
         }
     }
 
