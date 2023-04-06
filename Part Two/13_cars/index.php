@@ -93,7 +93,9 @@ class Car {
 
 }
 
-$porsche = new Car("Porsche","911 Turbo S", 2);
+// Testing Zone
+
+$porsche = new Car("Porsche","911 GT3 RS", 2);
 
 echo "<br> ----- <br>";
 $porsche->updateEngineStatus(true);
@@ -103,4 +105,18 @@ echo "<br> ----- <br>";
 $porsche->pressGasOrBrake("gas");
 echo "<br> ----- <br>";
 $porsche->pressGasOrBrake("brake");
-//$porsche->updateEngineStatus(true);
+
+
+/*
+
+Documentation :
+
+Engine |
+start engine - vehicle->updateEngineStatus(true);
+turn off engine - vehicle->updateEngineStatus(false);
+
+Speed/Gas&Brake |
+Accelerate - vehicle->pressGasOrBrake("gas");
+Deccelerate - vehicle->pressGasOrBrake("brake");
+
+*/
