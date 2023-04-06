@@ -23,7 +23,7 @@ class Car {
 
     // Return basic information about the car
     public function getInformation() {
-        return "This car is a ".$this->model." ".$this->brand.".";
+        echo "This car is a ".$this->model." ".$this->brand.".";
     }
 }
 
@@ -49,11 +49,15 @@ class ElectricCar extends Car {
 
     // Return basic information about the car
     public function getInformation() {
-        return "This electric car is a ".$this->model." ".$this->brand." with ".$autonomy."kmh of autonomy.";
+        echo "This electric car is a ".$this->model." ".$this->brand." with ".$this->autonomy."kmh of autonomy.";
     }
 }
 
 // Testing Zone
 $cls63amg = new Car("Mercedes AMG","CLS 63");
 echo "<br> ----- <br>";
+$cls63amg->getInformation();
+echo "<br> ----- <br>";
 $ami = new ElectricCar("Citroen","Ami",50);
+echo "<br> ----- <br>";
+$ami->getInformation();
