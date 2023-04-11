@@ -67,3 +67,8 @@ class BankClient {
 }
 
 $Ludwig = new BankClient("Ludwig","Meyer",date("d-m-y"),"Munich");
+echo "<br> ----- <br>";
+echo $Ludwig->getAccountData("main")["amount"].$Ludwig->getAccountData("main")["currency"]." sur le compte !";
+$Ludwig->setAccountAmount("main",956.15);
+echo "<br> ----- <br>";
+echo $Ludwig->getAccountData("main")["amount"].$Ludwig->getAccountData("main")["currency"]." sur le compte !";
