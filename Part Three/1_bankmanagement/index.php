@@ -56,9 +56,6 @@ class BankClient {
         // Saving account
         } elseif ($accounttype == "saving") {
             return($this->account_saving);
-        // returning 0 if input isn't correct
-        } else {
-            return(0);
         }
     }
 
@@ -69,9 +66,6 @@ class BankClient {
         // Adding money to saving account
         } elseif ($accounttype == "saving" && $amount >= 0) {
             $this->account_saving["amount"] = $amount;
-        // returning 0 if input isn't correct
-        } else {
-            return(0);
         }
     }
 
@@ -100,9 +94,6 @@ class BankClient {
             } else {
                 echo $this->firstname." ".$this->firstname." has not enough money !";
             }
-        } else {
-            // Returns 0 if input isn't correct
-            return(0);
         }
     }
 }
