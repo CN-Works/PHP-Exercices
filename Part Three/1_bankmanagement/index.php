@@ -104,13 +104,43 @@ class BankClient {
             }
         }
     }
+
+    public function giveAccountMoney(string $accounttype, float $amount) {
+        // negative amount
+        if ($amount < 0) {
+            echo "Can't give a negative amount.";
+            return;
+        }
+
+        if ($accounttype == "main") {
+            // Get account money
+            $money = $this->getAccountData("main")["amount"];
+            
+            // Adding the money
+            $money = $money+$amount
+            $this->setAccountAmount("main",$money);
+
+            // Message
+            echo $amount.$this->getAccountData("main")["currency"]." have been added to ".$this->firstname." ".$this->firstname."'s account !";
+        } elseif ($accounttype == "saving") {
+            // Get account money
+            $money = $this->getAccountData("saving")["amount"];
+            
+            // Adding the money
+            $money = $money+$amount
+            $this->setAccountAmount("saving",$money);
+
+            // Message
+            echo $amount.$this->getAccountData("saving")["currency"]." have been added to ".$this->firstname." ".$this->firstname."'s account !";
+        }
+    }
 }
 
 $Ludwig = new BankClient("Ludwig","Meyer",date("d-m-y"),"Munich");
 $Alfred = new BankClient("Alfred","Bamer",date("d-m-y"),"London");
 
 echo "<br> ----- <br>";
-$Ludwig->removeAccountMoney("main",-1);
+$Ludwig->removeAccountMoney("main",50);
 echo "<br> ----- <br>";
 echo $Ludwig->getPersonalData()["firstname"]." has ".$Ludwig->getAccountData("main")["amount"].$Ludwig->getAccountData("main")["currency"]." on his bank account !";
 echo "<br> ----- <br>";
