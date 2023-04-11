@@ -77,7 +77,7 @@ class BankClient {
             $money = $this->getAccountData("main")["amount"];
 
             // Checking if client can pay
-            if ($amount <= $money) {
+            if ($amount <= $money && $amount > 0) {
                 $money = $money-$amount;
                 $this->setAccountAmount("main",$money);
                 echo $amount.$this->getAccountData("main")["currency"]." have been removed from ".$this->firstname." ".$this->firstname."'s account !";
@@ -89,7 +89,7 @@ class BankClient {
             $money = $this->getAccountData("saving")["amount"];
 
             // Checking if client can pay
-            if ($amount <= $money) {
+            if ($amount <= $money && $amount > 0) {
                 $money = $money-$amount;
                 $this->setAccountAmount("saving",$money);
                 echo $amount.$this->getAccountData("saving")["currency"]." have been removed from ".$this->firstname." ".$this->firstname."'s account !";
@@ -104,7 +104,7 @@ $Ludwig = new BankClient("Ludwig","Meyer",date("d-m-y"),"Munich");
 $Alfred = new BankClient("Alfred","Bamer",date("d-m-y"),"London");
 
 echo "<br> ----- <br>";
-$Ludwig->removeAccountMoney("main",90);
+$Ludwig->removeAccountMoney("main",-1);
 echo "<br> ----- <br>";
 echo $Ludwig->getPersonalData()["firstname"]." has ".$Ludwig->getAccountData("main")["amount"].$Ludwig->getAccountData("main")["currency"]." on his bank account !";
 echo "<br> ----- <br>";
