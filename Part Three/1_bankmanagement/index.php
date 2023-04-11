@@ -73,9 +73,9 @@ class BankClient {
 
     public function removeAccountMoney(string $accounttype, float $amount) {
         // negative amount
-        if ($amount > 0) {
+        if ($amount < 0) {
             echo "Can't remove a negative amount.";
-            return
+            return;
         }
 
         if ($accounttype == "main") {
