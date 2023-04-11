@@ -73,7 +73,7 @@ class BankClient {
 
     public function removeAccountMoney(string $accounttype, float $amount) {
         // negative amount
-        if ($amount < 0) {
+        if ($amount <= 0) {
             echo "Can't remove a negative amount.";
             return;
         }
@@ -107,7 +107,7 @@ class BankClient {
 
     public function giveAccountMoney(string $accounttype, float $amount) {
         // negative amount
-        if ($amount < 0) {
+        if ($amount <= 0) {
             echo "Can't give a negative amount.";
             return;
         }
@@ -141,6 +141,8 @@ $Alfred = new BankClient("Alfred","Bamer",date("d-m-y"),"London");
 
 echo "<br> ----- <br>";
 $Ludwig->removeAccountMoney("main",50);
+echo "<br> ----- <br>";
+$Ludwig->giveAccountMoney("main",-1);
 echo "<br> ----- <br>";
 echo $Ludwig->getPersonalData()["firstname"]." has ".$Ludwig->getAccountData("main")["amount"].$Ludwig->getAccountData("main")["currency"]." on his bank account !";
 echo "<br> ----- <br>";
