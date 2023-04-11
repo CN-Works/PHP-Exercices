@@ -55,9 +55,15 @@ class ElectricCar extends Car {
 
 // Testing Zone
 $cls63amg = new Car("Mercedes AMG","CLS 63");
+
 echo "<br> ----- <br>";
+
 $cls63amg->getInformation();
+
 echo "<br> ----- <br>";
+
 $ami = new ElectricCar("Citroen","Ami",50);
+
 echo "<br> ----- <br>";
+
 $ami->getInformation();
