@@ -32,7 +32,7 @@ class BankClient {
         echo $firstname." ".$lastname." just created an account at CoolBank's in ".$city." !";
     }
 
-    // Get & Set methods
+    // Accounts Getter & Setter
     public function getAccountData(string $accounttype) {
         // Main account
         if ($accounttype == "main") {
@@ -45,4 +45,18 @@ class BankClient {
             return(0);
         }
     }
+
+    public function setAccountAmount(string $accounttype, float $amount) {
+        // Adding money to main account
+        if ($accounttype == "main" && $amount >= 0) {
+            $this->account_main["amount"] = $amount;
+        // Adding money to saving account
+        } elseif ($accounttype == "saving" && $amount >= 0) {
+            $this->account_saving["amount"] = $amount;
+        // returning 0 if input isn't correct
+        } else {
+            return(0);
+        }
+    }
 }
+
