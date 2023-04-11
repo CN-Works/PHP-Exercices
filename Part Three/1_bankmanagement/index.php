@@ -72,12 +72,18 @@ class BankClient {
     // Remove & Add money
 
     public function removeAccountMoney(string $accounttype, float $amount) {
+        // negative amount
+        if ($amount > 0) {
+            echo "Can't remove a negative amount.";
+            return
+        }
+
         if ($accounttype == "main") {
             // Get account money
             $money = $this->getAccountData("main")["amount"];
 
             // Checking if client can pay
-            if ($amount <= $money && $amount > 0) {
+            if ($amount <= $money) {
                 $money = $money-$amount;
                 $this->setAccountAmount("main",$money);
                 echo $amount.$this->getAccountData("main")["currency"]." have been removed from ".$this->firstname." ".$this->firstname."'s account !";
@@ -89,7 +95,7 @@ class BankClient {
             $money = $this->getAccountData("saving")["amount"];
 
             // Checking if client can pay
-            if ($amount <= $money && $amount > 0) {
+            if ($amount <= $money) {
                 $money = $money-$amount;
                 $this->setAccountAmount("saving",$money);
                 echo $amount.$this->getAccountData("saving")["currency"]." have been removed from ".$this->firstname." ".$this->firstname."'s account !";
