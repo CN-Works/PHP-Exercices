@@ -1,6 +1,6 @@
 <?php
 
-// Personnal Data
+// Personal Data
 $age = 45;
 $sex = "m";
 $is_taxable = null;
