@@ -79,7 +79,7 @@ class BankClient {
             // Checking if client can pay
             if ($amount <= $money) {
                 $this->setAccountAmount("main",$amount);
-                echo $amount.$this->getAccountData("main")["currency"]."have been added to ".$this->firstname." ".$this->firstname."'s account !";
+                echo $amount.$this->getAccountData("main")["currency"]." have been removed from ".$this->firstname." ".$this->firstname."'s account !";
             } else {
                 echo $this->firstname." ".$this->firstname." has not enough money !";
             }
@@ -90,7 +90,7 @@ class BankClient {
             // Checking if client can pay
             if ($amount <= $money) {
                 $this->setAccountAmount("saving",$amount);
-                echo $amount.$this->getAccountData("saving")["currency"]."have been added to ".$this->firstname." ".$this->firstname."'s account !";
+                echo $amount.$this->getAccountData("saving")["currency"]." have been removed from ".$this->firstname." ".$this->firstname."'s account !";
             } else {
                 echo $this->firstname." ".$this->firstname." has not enough money !";
             }
@@ -101,6 +101,8 @@ class BankClient {
 $Ludwig = new BankClient("Ludwig","Meyer",date("d-m-y"),"Munich");
 $Alfred = new BankClient("Alfred","Bamer",date("d-m-y"),"London");
 
+echo "<br> ----- <br>";
+$Ludwig->removeAccountMoney("main",90);
 echo "<br> ----- <br>";
 echo $Ludwig->getPersonalData()["firstname"]." has ".$Ludwig->getAccountData("main")["amount"].$Ludwig->getAccountData("main")["currency"]." on his bank account !";
 echo "<br> ----- <br>";
