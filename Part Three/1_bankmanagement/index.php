@@ -117,7 +117,7 @@ class BankClient {
             $money = $this->getAccountData("main")["amount"];
             
             // Adding the money
-            $money = $money+$amount
+            $money = $money+$amount;
             $this->setAccountAmount("main",$money);
 
             // Message
@@ -127,7 +127,7 @@ class BankClient {
             $money = $this->getAccountData("saving")["amount"];
             
             // Adding the money
-            $money = $money+$amount
+            $money = $money+$amount;
             $this->setAccountAmount("saving",$money);
 
             // Message
