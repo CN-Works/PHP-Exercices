@@ -13,7 +13,7 @@ class BankClient {
 
     private array $account_main = array(
         "currency" => "$",
-        "amount" => 0.0,
+        "amount" => 750.0,
     );
     private array $account_saving = array(
         "currency" => "$",
@@ -39,6 +39,7 @@ class BankClient {
     }
 
     // Accounts Getter & Setter
+
     public function getAccountData(string $accounttype) {
         // Main account
         if ($accounttype == "main") {
@@ -52,7 +53,7 @@ class BankClient {
         }
     }
 
-    public function setAccountAmount(string $accounttype, float $amount) {
+    private function setAccountAmount(string $accounttype, float $amount) {
         // Adding money to main account
         if ($accounttype == "main" && $amount >= 0) {
             $this->account_main["amount"] = $amount;
@@ -64,11 +65,43 @@ class BankClient {
             return(0);
         }
     }
+
+    // Remove & Add money
+
+    public function removeAccountMoney(string $accounttype, float $amount) {
+        if ($accounttype == "main") {
+            // Get account money
+            $money = $this->getAccountData("main")["amount"];
+
+            // Checking if client can pay
+            if ($amount <= $money) {
+                $this->setAccountAmount("main",$amount);
+                echo $amount.$this->getAccountData("main")["currency"]."have been added to ".$this->firstname." ".$this->firstname."'s account !";
+            } else {
+                echo $this->firstname." ".$this->firstname." has not enough money !";
+            }
+        } elseif ($accounttype == "saving") {
+            // Get account money
+            $money = $this->getAccountData("saving")["amount"];
+
+            // Checking if client can pay
+            if ($amount <= $money) {
+                $this->setAccountAmount("saving",$amount);
+                echo $amount.$this->getAccountData("saving")["currency"]."have been added to ".$this->firstname." ".$this->firstname."'s account !";
+            } else {
+                echo $this->firstname." ".$this->firstname." has not enough money !";
+            }
+        } else {
+            // Returns 0 if input isn't correct
+            return(0);
+        }
+    }
 }
 
 $Ludwig = new BankClient("Ludwig","Meyer",date("d-m-y"),"Munich");
+$Alfred = new BankClient("Alfred","Bamer",date("d-m-y"),"London");
+
 echo "<br> ----- <br>";
-echo $Ludwig->getAccountData("main")["amount"].$Ludwig->getAccountData("main")["currency"]." sur le compte !";
-$Ludwig->setAccountAmount("main",956.15);
+//echo $Ludwig->firstname." a ".$Ludwig->getAccountData("main")["amount"].$Ludwig->getAccountData("main")["currency"]." sur le compte !";
 echo "<br> ----- <br>";
-echo $Ludwig->getAccountData("main")["amount"].$Ludwig->getAccountData("main")["currency"]." sur le compte !";
+//echo $Alfred->firstname." a ".$Alfred->getAccountData("main")["amount"].$Alfred->getAccountData("main")["currency"]." sur le compte !";
