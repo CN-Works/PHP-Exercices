@@ -86,7 +86,7 @@ class BankClient {
             if ($amount <= $money) {
                 $money = $money-$amount;
                 $this->setAccountAmount("main",$money);
-                echo $amount.$this->getAccountData("main")["currency"]." have been removed from ".$this->firstname." ".$this->firstname."'s account !";
+                echo $amount.$this->getAccountData("main")["currency"]." have been removed from ".$this->firstname." ".$this->lastname."'s account !";
             } else {
                 echo $this->firstname." ".$this->firstname." has not enough money !";
             }
@@ -98,7 +98,7 @@ class BankClient {
             if ($amount <= $money) {
                 $money = $money-$amount;
                 $this->setAccountAmount("saving",$money);
-                echo $amount.$this->getAccountData("saving")["currency"]." have been removed from ".$this->firstname." ".$this->firstname."'s account !";
+                echo $amount.$this->getAccountData("saving")["currency"]." have been removed from ".$this->firstname." ".$this->lastname."'s account !";
             } else {
                 echo $this->firstname." ".$this->firstname." has not enough money !";
             }
@@ -121,7 +121,7 @@ class BankClient {
             $this->setAccountAmount("main",$money);
 
             // Message
-            echo $amount.$this->getAccountData("main")["currency"]." have been added to ".$this->firstname." ".$this->firstname."'s account !";
+            echo $amount.$this->getAccountData("main")["currency"]." have been added to ".$this->firstname." ".$this->lastname."'s account !";
         } elseif ($accounttype == "saving") {
             // Get account money
             $money = $this->getAccountData("saving")["amount"];
@@ -131,7 +131,7 @@ class BankClient {
             $this->setAccountAmount("saving",$money);
 
             // Message
-            echo $amount.$this->getAccountData("saving")["currency"]." have been added to ".$this->firstname." ".$this->firstname."'s account !";
+            echo $amount.$this->getAccountData("saving")["currency"]." have been added to ".$this->firstname." ".$this->lastname."'s account !";
         }
     }
 }
@@ -142,7 +142,7 @@ $Alfred = new BankClient("Alfred","Bamer",date("d-m-y"),"London");
 echo "<br> ----- <br>";
 $Ludwig->removeAccountMoney("main",50);
 echo "<br> ----- <br>";
-$Ludwig->giveAccountMoney("main",-1);
+$Ludwig->giveAccountMoney("main",55);
 echo "<br> ----- <br>";
 echo $Ludwig->getPersonalData()["firstname"]." has ".$Ludwig->getAccountData("main")["amount"].$Ludwig->getAccountData("main")["currency"]." on his bank account !";
 echo "<br> ----- <br>";
