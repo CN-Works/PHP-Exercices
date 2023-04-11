@@ -1,7 +1,7 @@
 <?php
 
 class BankClient {
-    // Personnal information
+    // Personal information
     private string $firstname;
     private string $lastname;
     private string $dob;
@@ -22,7 +22,7 @@ class BankClient {
 
     // Arguments
     public function __construct(string $firstname, string $lastname, string $dob, string $city) {
-        // Personnal properties
+        // Personal properties
         $this->firstname = $firstname;
         $this->lastname = $lastname;
         $this->dob = $dob;
@@ -40,13 +40,15 @@ class BankClient {
 
     // Accounts Getter & Setter
 
-    public function getPersonnalData() {
+    public function getPersonalData() {
+        // get "non-important" personal data
         $data = array(
             "firstname" => $this->firstname,
             "lastname" => $this->lastname,
             "dob" => $this->dob,
             "city" => $this->city,
         );
+        // returns the array
         return $data;
     }
 
@@ -112,6 +114,6 @@ $Ludwig = new BankClient("Ludwig","Meyer",date("d-m-y"),"Munich");
 $Alfred = new BankClient("Alfred","Bamer",date("d-m-y"),"London");
 
 echo "<br> ----- <br>";
-//echo $Ludwig->firstname." a ".$Ludwig->getAccountData("main")["amount"].$Ludwig->getAccountData("main")["currency"]." sur le compte !";
+echo $Ludwig->getPersonalData()["firstname"]." a ".$Ludwig->getAccountData("main")["amount"].$Ludwig->getAccountData("main")["currency"]." sur le compte !";
 echo "<br> ----- <br>";
-//echo $Alfred->firstname." a ".$Alfred->getAccountData("main")["amount"].$Alfred->getAccountData("main")["currency"]." sur le compte !";
+echo $Alfred->getPersonalData()["firstname"]." a ".$Alfred->getAccountData("main")["amount"].$Alfred->getAccountData("main")["currency"]." sur le compte !";
