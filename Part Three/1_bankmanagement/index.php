@@ -78,7 +78,8 @@ class BankClient {
 
             // Checking if client can pay
             if ($amount <= $money) {
-                $this->setAccountAmount("main",$amount);
+                $money = $money-$amount
+                $this->setAccountAmount("main",$money);
                 echo $amount.$this->getAccountData("main")["currency"]." have been removed from ".$this->firstname." ".$this->firstname."'s account !";
             } else {
                 echo $this->firstname." ".$this->firstname." has not enough money !";
@@ -89,7 +90,8 @@ class BankClient {
 
             // Checking if client can pay
             if ($amount <= $money) {
-                $this->setAccountAmount("saving",$amount);
+                $money = $money-$amount
+                $this->setAccountAmount("saving",$money);
                 echo $amount.$this->getAccountData("saving")["currency"]." have been removed from ".$this->firstname." ".$this->firstname."'s account !";
             } else {
                 echo $this->firstname." ".$this->firstname." has not enough money !";
