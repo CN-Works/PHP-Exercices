@@ -40,6 +40,16 @@ class BankClient {
 
     // Accounts Getter & Setter
 
+    public function getPersonnalData() {
+        $data = array(
+            "firstname" => $this->firstname,
+            "lastname" => $this->lastname,
+            "dob" => $this->dob,
+            "city" => $this->city,
+        );
+        return $data;
+    }
+
     public function getAccountData(string $accounttype) {
         // Main account
         if ($accounttype == "main") {
