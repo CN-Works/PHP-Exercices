@@ -29,5 +29,6 @@ class BankClient {
         $this->city = $city;
 
         // Printing Creation data
+        echo $firstname." ".$lastname." just created an account at CoolBank's in ".$city." !";
     }
 }
