@@ -9,7 +9,7 @@ class BankClient {
     private string $city;
 
     // Acounts
-    private string $uuid = "MCB_".rand(1, 999999);
+    private string $uuid;
 
     private array $account_main = array(
         "currency" => "$",
@@ -28,18 +28,24 @@ class BankClient {
         $this->dob = $dob;
         $this->city = $city;
 
+        // UUID generation
+        $this->uuid = "MyCoolBank_".rand(1, 999999);
+
+        echo "id : ".$this->uuid."<br>";
+
+
         // Printing Creation data
-        echo $firstname." ".$lastname." just created an account at CoolBank's in ".$city." !";
+        echo $firstname." ".$lastname." just created an account at MyCoolBank's in ".$city." !";
     }
 
     // Accounts Getter & Setter
     public function getAccountData(string $accounttype) {
         // Main account
         if ($accounttype == "main") {
-            return($this->account_main)
+            return($this->account_main);
         // Saving account
         } elseif ($accounttype == "saving") {
-            return($this->account_saving)
+            return($this->account_saving);
         // returning 0 if input isn't correct
         } else {
             return(0);
@@ -60,3 +66,4 @@ class BankClient {
     }
 }
 
+$Ludwig = new BankClient("Ludwig","Meyer",date("d-m-y"),"Munich");
