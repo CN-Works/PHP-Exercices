@@ -31,11 +31,8 @@ class BankClient {
         // UUID generation
         $this->uuid = "MyCoolBank_".rand(1, 999999);
 
-        echo "id : ".$this->uuid."<br>";
-
-
         // Printing Creation data
-        echo $firstname." ".$lastname." just created an account at MyCoolBank's in ".$city." !";
+        echo $this->uuid." : ".$firstname." ".$lastname." just created an account at MyCoolBank's in ".$city." ! <br>";
     }
 
     // Accounts Getter & Setter
@@ -114,6 +111,6 @@ $Ludwig = new BankClient("Ludwig","Meyer",date("d-m-y"),"Munich");
 $Alfred = new BankClient("Alfred","Bamer",date("d-m-y"),"London");
 
 echo "<br> ----- <br>";
-echo $Ludwig->getPersonalData()["firstname"]." a ".$Ludwig->getAccountData("main")["amount"].$Ludwig->getAccountData("main")["currency"]." sur le compte !";
+echo $Ludwig->getPersonalData()["firstname"]." has ".$Ludwig->getAccountData("main")["amount"].$Ludwig->getAccountData("main")["currency"]." on his bank account !";
 echo "<br> ----- <br>";
-echo $Alfred->getPersonalData()["firstname"]." a ".$Alfred->getAccountData("main")["amount"].$Alfred->getAccountData("main")["currency"]." sur le compte !";
+echo $Alfred->getPersonalData()["firstname"]." has ".$Alfred->getAccountData("main")["amount"].$Alfred->getAccountData("main")["currency"]." on his bank account !";
