@@ -9,6 +9,7 @@ class BankClient {
     private string $city;
 
     // Acounts
+    private string $uuid = "mycoolbank_".rand(1, 999999) ;
 
     private array $account_main = array(
         "currency" => "$",
