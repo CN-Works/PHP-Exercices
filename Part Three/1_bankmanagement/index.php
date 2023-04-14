@@ -17,7 +17,7 @@ class BankClient {
     );
     private array $account_saving = array(
         "currency" => "$",
-        "amount" => 0.0,
+        "amount" => 750.0,
     );
 
     // Arguments
@@ -44,6 +44,7 @@ class BankClient {
             "lastname" => $this->lastname,
             "dob" => $this->dob,
             "city" => $this->city,
+            "id" =>$this->uuid,
         );
         // returns the array
         return $data;
@@ -136,6 +137,26 @@ class BankClient {
     }
 }
 
+// Money transfert
+
+function sendMoneyToAnotherAccount($sender, string $sender_type, $receiver, string $receiver_type, float $amount) {
+    if ($sender->getAccountData($sender_type)["amount"] >= $amount) {
+        // Removing money from sender account
+        $sender->removeAccountMoney($sender_type,$amount);
+
+        echo "<br> ----- <br>";
+
+        // Giving money to receiver
+        $receiver->giveAccountMoney($sender_type,$amount);
+
+        // Message
+        echo "<br> ----- <br>";
+        echo "Transfert of ".$amount.$sender->getAccountData($sender_type)["currency"]." done from '".$sender->getPersonalData($sender_type)["id"]."' to '".$receiver->getPersonalData($sender_type)["id"]."'.";
+    }
+}
+
+// Testing
+
 $Ludwig = new BankClient("Ludwig","Meyer",date("d-m-y"),"Munich");
 $Alfred = new BankClient("Alfred","Bamer",date("d-m-y"),"London");
 
@@ -144,6 +165,9 @@ $Ludwig->removeAccountMoney("main",50);
 echo "<br> ----- <br>";
 $Ludwig->giveAccountMoney("main",55);
 echo "<br> ----- <br>";
-echo $Ludwig->getPersonalData()["firstname"]." has ".$Ludwig->getAccountData("main")["amount"].$Ludwig->getAccountData("main")["currency"]." on his bank account !";
+echo $Ludwig->getPersonalData()["firstname"]." ".$Ludwig->getPersonalData()["lastname"]." has ".$Ludwig->getAccountData("main")["amount"].$Ludwig->getAccountData("main")["currency"]." on his bank account !";
 echo "<br> ----- <br>";
-echo $Alfred->getPersonalData()["firstname"]." has ".$Alfred->getAccountData("main")["amount"].$Alfred->getAccountData("main")["currency"]." on his bank account !";
+echo $Alfred->getPersonalData()["firstname"]." ".$Alfred->getPersonalData()["lastname"]." has ".$Alfred->getAccountData("main")["amount"].$Alfred->getAccountData("main")["currency"]." on his bank account !";
+echo "<br> -- Transfert -- <br>";
+
+sendMoneyToAnotherAccount($Ludwig,"saving",$Alfred,"main",500);
