@@ -1,5 +1,7 @@
 <?php
 
+$registered_books = array();
+
 class Book {
     // Information
     private string $title;
@@ -28,3 +30,5 @@ class Book {
     }
 }
 
+
+$registered_books["Le fléau"] = new Book("Le fléau","Stephen","King",823,"1978",14);
