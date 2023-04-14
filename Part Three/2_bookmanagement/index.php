@@ -26,7 +26,7 @@ class Book {
 
     // Presentation message
     public function __toString() {
-        return $this->title." (".$this->publication.") : ".$this->pages." pages / ".$this->price."€";
+        return "<strong>".$this->title."</strong> (".$this->publication.") : ".$this->pages." pages / ".$this->price."€";
     }
 }
 
