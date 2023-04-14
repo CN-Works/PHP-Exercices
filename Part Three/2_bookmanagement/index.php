@@ -26,9 +26,11 @@ class Book {
 
     // Presentation message
     public function __toString() {
-        return $this->title." (".$this->publication.") : ".$this->pages." pages / "$this->price."€";
+        return $this->title." (".$this->publication.") : ".$this->pages." pages / ".$this->price."€";
     }
 }
 
+// Testing
 
 $registered_books["Le fléau"] = new Book("Le fléau","Stephen","King",823,"1978",14);
+echo $registered_books["Le fléau"];
