@@ -44,7 +44,7 @@ class Account {
     public function giveAccountMoney(float $amount) {
         if ($amount > 0) {
             $this->amount = $this->amount+$amount;
-            echo "<br>".$this->uuid." : ".$amount."$ added. ".$this->amount."$ now.";
+            echo "<br>".$this->uuid." : ".$amount.$this->currency." added. ".$this->amount.$this->currency." now.";
         } else {
             echo "Can't add an amount lower than zero.";
         }
@@ -54,7 +54,7 @@ class Account {
         // Here we can't remove money if funds are insufficient
         if ($amount > 0 && $amount < $this->amount) {
             $this->amount = $this->amount-$amount;
-            echo "<br>".$this->uuid." : ".$amount."$ removed. ".$this->amount."$ left.";
+            echo "<br>".$this->uuid." : ".$amount.$this->currency." removed. ".$this->amount.$this->currency." left.";
         } else {
             echo "Can't remove this amount of money (negative value or not enough money)";
         }
