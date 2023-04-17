@@ -47,4 +47,13 @@ class Account {
             echo "Can't add an amount lower than zero.";
         }
     }
+
+    public function removeAccountMoney(float $amount) {
+        // Here we can't remove money if funds are insufficient
+        if ($amount > 0 && $amount > $this->amount) {
+            $this->amount = $this->amount-$amount;
+        } else {
+            echo "Can't remove this amount of money (negative value or not enough money)";
+        }
+    }
 }
