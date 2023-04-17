@@ -45,5 +45,6 @@ class BankClient {
     public function addAccount(Account $account) {
         // adding a new account
         array_push($accounts,$account);
+        var_dump($accounts)
     }
 }
