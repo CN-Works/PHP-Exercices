@@ -19,7 +19,7 @@ class BankClient {
         $this->city = $city;
 
         // Printing Creation data
-        echo $this->uuid." : ".$firstname." ".$lastname." just created an account at MyCoolBank's in ".$city." ! <br>";
+        echo $firstname." ".$lastname." just created an account at MyCoolBank's in ".$city." ! <br>";
     }
 
     // Accounts Getter & Setter
