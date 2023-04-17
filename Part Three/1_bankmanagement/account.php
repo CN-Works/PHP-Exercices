@@ -24,6 +24,8 @@ class Account {
 
         // Just for testing
         $this->amount = 720.0;
+
+        echo "An account has been created with id : <strong>".$this->uuid."</strong>";
     }
 
     public function getAccountData() : array {
