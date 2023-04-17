@@ -39,4 +39,12 @@ class Account {
         // Returning all data
         return $accountData;
     }
+
+    public function giveAccountMoney(float $amount) {
+        if ($amount > 0) {
+            $this->amount = $amount;
+        } else {
+            echo "Can't add an amount lower than zero.";
+        }
+    }
 }
