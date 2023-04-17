@@ -31,11 +31,49 @@ class BankClient {
             "lastname" => $this->lastname,
             "dob" => $this->dob,
             "city" => $this->city,
-            "id" =>$this->uuid,
+            "id" => $this->uuid,
         );
         // returns the array
         return $data;
     }
+
+    // Firstname
+    public function getFirstname() {
+        return $this->firstname;
+    }
+
+    public function setFirstname(string $new_name) {
+        $this->firstname = $new_name;
+    }
+
+    // Lastname
+    public function getLastname() {
+        return $this->lastname;
+    }
+
+    public function setLastname(string $new_name) {
+        $this->lastname = $new_name;
+    }
+
+    // City
+    public function getCity() {
+        return $this->city;
+    }
+
+    public function setCity(string $new_city) {
+        $this->city = $new_city;
+    }
+
+    // Uneditable data
+    public function getDateOfBirth() {
+        return $this->dob;
+    }
+    
+    public function getBankIdentifier() {
+        return $this->uuid;
+    }
+
+    // General function
 
     public function addAccount(Account $new_account) {
         // adding a new account
