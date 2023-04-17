@@ -20,7 +20,7 @@ class Account {
         $this->label = $label;
 
         // UUID generation
-        $this->uuid = "MyCoolBank_".rand(1, 999999);
+        $this->uuid = "MCB_".rand(1, 9999999);
 
         // Just for testing
         $this->amount = 720.0;
@@ -30,10 +30,10 @@ class Account {
 
     public function getAccountData() : array {
         $accountData = array(
-            "amount" => $amount,
-            "currency" => $currency,
-            "label" => $label,
-            "client" => $client,
+            "amount" => $this->amount,
+            "currency" => $this->currency,
+            "label" => $this->label,
+            "client" => $this->client,
         );
         // Returning all data
         return $accountData;
