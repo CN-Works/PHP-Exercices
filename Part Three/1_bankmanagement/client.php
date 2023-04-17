@@ -1,5 +1,6 @@
 <?php
 
+
 class BankClient {
     // Personal information
     private string $firstname;
