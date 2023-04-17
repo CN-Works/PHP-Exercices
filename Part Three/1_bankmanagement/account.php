@@ -34,6 +34,7 @@ class Account {
             "currency" => $this->currency,
             "label" => $this->label,
             "client" => $this->client,
+            "uuid" => $this->uuid,
         );
         // Returning all data
         return $accountData;
