@@ -38,7 +38,6 @@ class BankClient {
 
     public function addAccount(Account $new_account) {
         // adding a new account
-        array_push($this->accounts,$new_account);
-        var_dump($this->accounts);
+        $this->accounts[$new_account->getAccountData()["uuid"]] = $new_account;
     }
 }
