@@ -12,3 +12,6 @@ echo "<br> ----- <br>";
 $savings = new Account($Ludwig,"$","Saving account");
 echo "<br> ----- <br>";
 $Ludwig->addAccount($savings);
+echo $savings->getAccountData()["amount"];
+echo "<br> ----- <br>";
+$savings->removeAccountMoney(50.0);
