@@ -36,9 +36,9 @@ class BankClient {
         return $data;
     }
 
-    public function addAccount(Account $account) {
+    public function addAccount(Account $new_account) {
         // adding a new account
-        array_push($accounts,$account);
-        var_dump($accounts);
+        array_push($this->accounts,$new_account);
+        var_dump($this->accounts);
     }
 }
