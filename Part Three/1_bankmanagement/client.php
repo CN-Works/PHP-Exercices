@@ -41,4 +41,9 @@ class BankClient {
         // returns the array
         return $data;
     }
+
+    public function addAccount(Account $account) {
+        // adding a new account
+        array_push($accounts,$account);
+    }
 }
