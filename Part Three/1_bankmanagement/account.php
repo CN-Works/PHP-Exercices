@@ -14,7 +14,7 @@ class Account {
     private BankClient $client;
 
     // Arguments
-    public function __construct(BankClient $client, string $currency,string $label) {
+    public function __construct(BankClient $client, string $currency,float $default_amount,string $label) {
         // Setting up all args
         $this->client = $client;
         $this->currency = $currency;
@@ -23,8 +23,8 @@ class Account {
         // UUID generation
         $this->uuid = "MCB_".rand(1, 999999999);
 
-        // Just for testing
-        $this->amount = 720.0;
+        // Default money
+        $this->amount = $default_amount;
 
         echo "An account has been created with id : <strong>".$this->uuid."</strong>";
     }
