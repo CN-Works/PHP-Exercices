@@ -8,9 +8,6 @@ class BankClient {
     
     private string $city;
 
-    // Acounts
-    private string $uuid;
-
     private array $accounts;
 
     // Arguments
@@ -20,9 +17,6 @@ class BankClient {
         $this->lastname = $lastname;
         $this->dob = $dob;
         $this->city = $city;
-
-        // UUID generation
-        $this->uuid = "MyCoolBank_".rand(1, 999999);
 
         // Printing Creation data
         echo $this->uuid." : ".$firstname." ".$lastname." just created an account at MyCoolBank's in ".$city." ! <br>";
@@ -45,6 +39,6 @@ class BankClient {
     public function addAccount(Account $account) {
         // adding a new account
         array_push($accounts,$account);
-        var_dump($accounts)
+        var_dump($accounts);
     }
 }
