@@ -20,7 +20,7 @@ class Account {
         $this->label = $label;
 
         // UUID generation
-        $this->uuid = "MCB_".rand(1, 9999999);
+        $this->uuid = "MCB_".rand(1, 999999999);
 
         // Just for testing
         $this->amount = 720.0;
@@ -42,7 +42,8 @@ class Account {
 
     public function giveAccountMoney(float $amount) {
         if ($amount > 0) {
-            $this->amount = $amount;
+            $this->amount = $this->amount+$amount;
+            echo $amount."$ added. ".$this->amount."$ now.";
         } else {
             echo "Can't add an amount lower than zero.";
         }

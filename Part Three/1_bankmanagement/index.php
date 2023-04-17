@@ -15,3 +15,5 @@ $Ludwig->addAccount($savings);
 echo $savings->getAccountData()["amount"];
 echo "<br> ----- <br>";
 $savings->removeAccountMoney(50.0);
+echo "<br> ----- <br>";
+$savings->giveAccountMoney(50.0);
