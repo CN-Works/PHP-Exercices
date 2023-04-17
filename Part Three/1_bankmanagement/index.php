@@ -12,4 +12,5 @@ echo "<br> ----- <br>";
 $savings = new Account($Ludwig,"$","Saving account");
 echo "<br> ----- <br>";
 $Ludwig->addAccount($savings);
-var_dump(Ludwig);
+echo "<br> ----- <br>";
+var_dump($Ludwig);

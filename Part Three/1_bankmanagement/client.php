@@ -8,7 +8,7 @@ class BankClient {
     
     private string $city;
 
-    private array $accounts;
+    private array $accounts = array();
 
     // Arguments
     public function __construct(string $firstname, string $lastname, string $dob, string $city) {
