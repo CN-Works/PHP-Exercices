@@ -1,8 +1,8 @@
 <?php
 
 // Adding requirements
-require "account.php";
-require "client.php";
+require "Account.php";
+require "BankClient.php";
 
 // Testing
 
@@ -13,9 +13,7 @@ $Felipe = new BankClient("Felipe","Salamanca",date("d-m-y"),"Los Cabos");
 // Creating accounts
 echo "<br> -- Creating Accounts -- <br>";
 $savings = new Account($Ludwig,"$",720.0,"Saving account");
-$Ludwig->addAccount($savings);
 $main_ludwig = new Account($Ludwig,"$",720.0,"Main");
-$Ludwig->addAccount($main_ludwig);
 
 $main = new Account($Felipe,"$",720.0,"Main");
 $Felipe->addAccount($main);

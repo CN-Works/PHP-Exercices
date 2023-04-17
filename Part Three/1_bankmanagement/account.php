@@ -26,6 +26,8 @@ class Account {
         // Default money
         $this->amount = $default_amount;
 
+        $this->client->addAccount($this);
+
         echo "An account has been created with id : <strong>".$this->uuid."</strong>";
     }
 
