@@ -42,4 +42,14 @@ class BankClient {
         //$this->accounts[$new_account->getAccountData()["uuid"]] = $new_account;
         array_push($this->accounts,$new_account);
     }
+    
+    public function showAccounts() {
+        // generating a string for return
+        $text = $this->firstname." ".$this->lastname."'s bank accounts.<br>";
+        foreach($this->accounts as $key => $value) {
+            $text = $text."<br>".$value->getAccountData()["uuid"]." : ".$value->getAccountData()["amount"].$value->getAccountData()["currency"];
+        }
+
+        return $text;
+    }
 }
