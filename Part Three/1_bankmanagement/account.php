@@ -6,6 +6,9 @@ class Account {
     private string $currency;
     private float $amount;
 
+    // Acount id
+    private string $uuid;
+
     // Client related
     private BankClient $client;
 
@@ -15,6 +18,9 @@ class Account {
         $this->client = $client;
         $this->currency = $currency;
         $this->label = $label;
+
+        // UUID generation
+        $this->uuid = "MyCoolBank_".rand(1, 999999);
 
         // Just for testing
         $this->amount = 720.0;
