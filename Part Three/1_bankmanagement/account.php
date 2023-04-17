@@ -41,6 +41,45 @@ class Account {
         return $accountData;
     }
 
+    // Amount
+    public function getAmount() : float {
+        return $this->amount;
+    }
+
+    public function setAmount(float $new_amount) {
+        $this->amount = $new_amount;
+    }
+
+    // Currency
+    public function getCurrency() : string {
+        return $this->currency;
+    }
+
+    // Label
+    public function getLabel() : string {
+        return $this->label;
+    }
+
+    public function setLabel(string $new_label) {
+        $this->label = $new_label;
+    }
+
+    // Client
+    public function getClient() : BankClient {
+        return $this->client;
+    }
+
+    public function setClient(BankClient $new_client) {
+        $this->client = $new_client;
+    }
+
+    // Bank id
+    public function getBankId() : string {
+        return $this->uuid;
+    }
+
+    // Methods
+
     public function giveAccountMoney(float $amount) {
         if ($amount > 0) {
             $this->amount = $this->amount+$amount;

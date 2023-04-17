@@ -73,7 +73,7 @@ class BankClient {
         return $this->uuid;
     }
 
-    // General function
+    // Methods
 
     public function addAccount(Account $new_account) {
         // adding a new account
