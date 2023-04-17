@@ -84,7 +84,7 @@ class BankClient {
         // generating a string for return
         $text = $this->firstname." ".$this->lastname."'s bank accounts.<br>";
         foreach($this->accounts as $account) {
-            $text = $text."<br>".$account->getAccountData()["label"]." / ".$account->getAccountData()["amount"].$account->getAccountData()["currency"]." / ".$account->getAccountData()["currency"];
+            $text = $text."<br>".$account->getLabel()." / ".$account->getAmount().$account->getCurrency();
         }
 
         return $text;
