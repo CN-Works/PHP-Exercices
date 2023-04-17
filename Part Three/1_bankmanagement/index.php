@@ -28,7 +28,12 @@ $Felipe = new BankClient("Felipe","Salamanca",date("d-m-y"),"Los Cabos");
 // Creating accounts
 echo "<br> -- Creating Accounts -- <br>";
 $savings = new Account($Ludwig,"$","Saving account");
+$Ludwig->addAccount($savings);
+$main_ludwig = new Account($Ludwig,"$","Main");
+$Ludwig->addAccount($main_ludwig);
+
 $main = new Account($Felipe,"$","Main");
+$Felipe->addAccount($main);
 
 // Account money
 echo "<br> -- Amount of money -- <br>";
@@ -43,3 +48,7 @@ $savings->giveAccountMoney(50.0);
 // Money Transfer account to account
 echo "<br> -- Money transfer -- <br>";
 transferMoneyToOtherAccount($main,$savings,100);
+
+// Show Bank accounts
+echo "<br> -- All Accounts -- <br>";
+echo $Ludwig->showAccounts();
