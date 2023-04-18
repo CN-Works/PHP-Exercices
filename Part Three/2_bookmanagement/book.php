@@ -5,19 +5,23 @@ class Book {
     private string $title;
     private int $pages;
     private float $price;
-    private string $publicationDate;
+    private DateTime $publicationDate;
 
     // Author class
     private Author $author;
 
-    public function __construct(string $title, int $pages, string $publicationDate, float $price) {
+    public function __construct(Author $author,string $title, int $pages, string $publicationDate, float $price) {
         // setting arguments
         $this->title = $title;
         $this->pages = $pages;
         $this->price = $price;
 
         // Date
-        $this->publicationDate = $publicationDate;
+        $this->publicationDate = date($publicationDate);
+
+        // Author & book setter
+        $this->author = $author;
+        $this->author->addBook($this);
     }
 
     // Presentation message
