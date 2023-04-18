@@ -36,7 +36,7 @@ class Person {
     }
 
 
-    
+
     public function getLastname()
     {
         return $this->lastname;
@@ -63,7 +63,7 @@ class Person {
 
     public function getDob()
     {
-        return $this->dob;
+        return date_format($this->dob,"d.m.y");
     }
 
     public function setDob($dob)
