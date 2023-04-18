@@ -55,4 +55,15 @@ class Author {
     public function addBook(Book $new_book) {
         $this->books[] = $new_book;
     }
+
+    // Showing all books
+    public function showAllBooks(): string {
+        $text = "<h2>".$this."</h2>";
+
+        foreach($this->books as $book) {
+            $text .= "<br>".$book;
+        }
+
+        return $text;
+    }
 }

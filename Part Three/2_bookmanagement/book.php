@@ -4,8 +4,8 @@ class Book {
     // Information
     private string $title;
     private int $pages;
-    private float $price;
     private DateTime $publicationDate;
+    private float $price;
 
     // Author class
     private Author $author;
@@ -19,7 +19,7 @@ class Book {
         // Date
         $this->publicationDate = date($publicationDate);
 
-        // Author & book setter
+        // Author & book linking
         $this->author = $author;
         $this->author->addBook($this);
     }
