@@ -5,4 +5,6 @@ require "Book.php";
 
 // Testing
 
-$registered_books["Le fléau"] = new Book("Le fléau",823,"1978",14.45);
+$StephenKing = new Author();
+
+$fleau = new Book("Le fléau",823,"1978",14.45);
