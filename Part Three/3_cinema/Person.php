@@ -21,4 +21,53 @@ class Person {
         // returns person's name, ex : "John Doe"
         return $this->firstname." ".$lastname;
     }
+
+    // Getter & setter
+
+
+    public function getFirstname()
+    {
+        return $this->firstname;
+    }
+
+    public function setFirstname($firstname)
+    {
+        $this->firstname = $firstname;
+    }
+
+
+    
+    public function getLastname()
+    {
+        return $this->lastname;
+    }
+
+    public function setLastname($lastname)
+    {
+        $this->lastname = $lastname;
+    }
+
+
+
+    public function getSex()
+    {
+        return $this->sex;
+    }
+
+    public function setSex($sex)
+    {
+        $this->sex = $sex;
+    }
+
+
+
+    public function getDob()
+    {
+        return $this->dob;
+    }
+
+    public function setDob($dob)
+    {
+        $this->dob = $dob;
+    }
 }
