@@ -2,12 +2,12 @@
 
 class Person {
     // Identity
-    private string $firstname;
-    private string $lastname;
-    private string $sex;
+    protected string $firstname;
+    protected string $lastname;
+    protected string $sex;
 
     // Date of birth
-    private DateTime $dob;
+    protected DateTime $dob;
 
     public function __construct(string $firstname, string $lastname, string $sex, string $dob) {
         // setting arguments
@@ -69,5 +69,23 @@ class Person {
     public function setDob($dob)
     {
         $this->dob = $dob;
+    }
+}
+
+// Producer
+
+class Producer extends Person {
+    // films
+    private array $films = [];
+
+    
+    public function getFilms(): array
+    {
+        return $this->films;
+    }
+
+    public function setFilms($films)
+    {
+        $this->films = $films;
     }
 }
