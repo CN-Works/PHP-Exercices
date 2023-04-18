@@ -61,7 +61,7 @@ class Author {
         $text = "<h2>".$this."</h2>";
 
         foreach($this->books as $book) {
-            $text .= "<br>".$book;
+            $text .= "<br>".$book." : ".$book->getPages()." pages / ".$book->getPrice()."€";
         }
 
         return $text;
