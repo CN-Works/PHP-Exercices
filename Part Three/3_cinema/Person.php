@@ -75,17 +75,21 @@ class Person {
 // Producer
 
 class Producer extends Person {
-    // films
-    private array $films = [];
+    // movies
+    private array $movies = [];
 
     
-    public function getFilms(): array
+    public function getMovies(): array
     {
-        return $this->films;
+        return $this->movies;
     }
 
-    public function setFilms($films)
+    public function setMovies($movies)
     {
-        $this->films = $films;
+        $this->movies = $movies;
+    }
+
+    public function addMovie (Film $new_movie) {
+        $this->movies[] = $new_movie;
     }
 }
