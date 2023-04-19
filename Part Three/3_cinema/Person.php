@@ -75,10 +75,10 @@ class Person {
 // Producer
 
 class Producer extends Person {
-    // movies
     private array $movies = [];
 
     
+    // Movies
     public function getMovies(): array
     {
         return $this->movies;
@@ -89,7 +89,7 @@ class Producer extends Person {
         $this->movies = $movies;
     }
 
-    public function addMovie (Film $new_movie) {
+    public function addMovie (Movie $new_movie) {
         $this->movies[] = $new_movie;
     }
 }
