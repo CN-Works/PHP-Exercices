@@ -20,11 +20,13 @@ class Movie {
     public function __construct(string $title, string $releaseDate, int $duration, string $synopsys, Producer $producer, Genre $genre) {
         $this->title = $title;
         $this->releaseDate = new DateTime($releaseDate);
+
+        // Movie data
         $this->duration = $duration;
         $this->synopsys = $synopsys;
+        $this->genre = $genre;
 
         // Producer
         $this->producer = $producer;
-        $this->genre = $genre;
     }
 }
