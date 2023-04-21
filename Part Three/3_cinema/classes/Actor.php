@@ -27,6 +27,17 @@ class Actor extends Person {
             "casting" => $casting,
         );
 
+        // adding the data in main array
         $characters[] = $new_character;
+    }
+
+    public function showAllCharacters(): string {
+        $text = "<h2>".$this." played roles</h2><br>";
+
+        foreach($characters as $roleInfo) {
+            $text .= $roleInfo["role"]." interpreting ".$roleInfo["casting"]->getMovie()."<br>";
+        }
+
+        return $text;
     }
 }
