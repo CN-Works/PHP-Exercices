@@ -3,9 +3,13 @@
 // Producer
 
 class Producer extends Person {
+    // $movies will stack all movie as casting format, see Casting.php
     private array $movies = [];
 
-    
+    public function __construct(string $firstname, string $lastname, string $sex, string $dob) {
+        parent::__construct();
+    }
+
     // Movies
     public function getMovies(): array
     {
@@ -17,7 +21,5 @@ class Producer extends Person {
         $this->movies = $movies;
     }
 
-    public function addMovie (Movie $new_movie) {
-        $this->movies[] = $new_movie;
-    }
+    
 }
