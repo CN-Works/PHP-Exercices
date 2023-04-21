@@ -36,4 +36,8 @@ class Genre {
     {
         $this->movies = $movies;
     }
+
+    public function addMovie(Movie $new_movie) {
+        $this->movies[] = $new_movie;
+    }
 }
