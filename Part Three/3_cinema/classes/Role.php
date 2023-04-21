@@ -38,4 +38,13 @@ class Role {
     {
         $this->castings = $castings;
     }
+
+    public function addCasting(Actor $actor, Casting $casting) {
+        $new_casting = array(
+            "actor" => $actor,
+            "casting" => $casting,
+        );
+
+        $this->castings[] = $new_casting;
+    }
 }
