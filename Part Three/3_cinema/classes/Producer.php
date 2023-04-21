@@ -21,5 +21,8 @@ class Producer extends Person {
         $this->movies = $movies;
     }
 
-    
+    // Adding a movie (using Casting object)
+    public function addMovie(Movie $new_casting) {
+        $this->movie[] = $new_casting;
+    }
 }
