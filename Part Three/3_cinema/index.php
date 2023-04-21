@@ -2,5 +2,7 @@
 
 // Autoloader
 spl_autoload_register(function ($class_name) {     
-    include "Classes/" . $class_name . '.php'; }
-);
+    include "classes/" . $class_name . '.php';
+});
+
+echo "test exo";
