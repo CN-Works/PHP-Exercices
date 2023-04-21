@@ -51,10 +51,10 @@ class Role {
     // Generals
 
     public function showAllCharacterApparition() {
-        $text = "<h2>".$this->roleName."</h2><br>";
+        $text = "<h2>".$this->roleName." role</h2><br>";
 
         foreach($this->castings as $info) {
-            $text .= "Has been interpreted by "$info["actor"]." in ".$info["casting"]->getMovie()."<br>";
+            $text .= "Interpreted by "$info["actor"]." in ".$info["casting"]->getMovie()."<br>";
         }
 
         return $text;
