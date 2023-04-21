@@ -15,5 +15,16 @@ class Casting {
 
     // public function __toString() {
     // }
+    
+    // Adding actors & role to cast
+    public function addingActorsAndRoles(Actor $actor, Role $role) {
+        // Creating a sub array for organization
+        $new_character = array(
+            "actor" => $actor,
+            "role" => $role,
+        );
 
+        // adding the new character to the cast
+        $this->cast[] = $new_character;
+    }
 }
