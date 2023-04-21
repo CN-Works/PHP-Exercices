@@ -13,9 +13,52 @@ class Casting {
         $this->producer = $producer;
     }
 
-    // public function __toString() {
-    // }
-    
+    public function __toString() {
+    }
+
+    // producer related
+    public function getProducer()
+    {
+        return $this->producer;
+    }
+
+    public function setProducer($producer)
+    {
+        $this->producer = $producer;
+
+        return $this;
+    }
+
+
+
+    // movie related
+    public function getMovie()
+    {
+        return $this->movie;
+    }
+
+    public function setMovie($movie)
+    {
+        $this->movie = $movie;
+
+        return $this;
+    }
+
+
+
+    // cast related
+    public function getCast()
+    {
+        return $this->cast;
+    }
+
+    public function setCast($cast)
+    {
+        $this->cast = $cast;
+
+        return $this;
+    }
+
     // Adding actors & role to cast
     public function addingActorsAndRoles(Actor $actor, Role $role) {
         // Creating a sub array for organization
