@@ -40,4 +40,14 @@ class Genre {
     public function addMovie(Movie $new_movie) {
         $this->movies[] = $new_movie;
     }
+
+    public function showAllMovies(): string {
+        $text = "<h2>All ".$this." movies</h2><br>";
+
+        foreach($this->movies as $movie) {
+            $text .= $movie;
+        }
+
+        return $text;
+    }
 }
