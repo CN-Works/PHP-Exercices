@@ -14,6 +14,7 @@ class Casting {
     }
 
     public function __toString() {
+        return $this->movie."'s casting produced by ".$this->producer;
     }
 
     // producer related
