@@ -22,9 +22,9 @@ class Person {
         return $this->firstname." ".$lastname;
     }
 
-    // Getter & setter
+    // Getters & setters
 
-
+    // name related
     public function getFirstname()
     {
         return $this->firstname;
@@ -34,8 +34,6 @@ class Person {
     {
         $this->firstname = $firstname;
     }
-
-
 
     public function getLastname()
     {
@@ -48,7 +46,7 @@ class Person {
     }
 
 
-
+    // sex related
     public function getSex()
     {
         return $this->sex;
@@ -60,7 +58,7 @@ class Person {
     }
 
 
-
+    // Date of birth related
     public function getDob()
     {
         return date_format($this->dob,"d.m.y");
