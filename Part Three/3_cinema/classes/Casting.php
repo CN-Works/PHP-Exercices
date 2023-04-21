@@ -71,4 +71,14 @@ class Casting {
         // adding the new character to the cast
         $this->cast[] = $new_character;
     }
+
+    public function showCasting() {
+        $text = "<h2>".$this->movie."'s casting</h2><br>";
+
+        foreach($this->cast as $info) {
+            $text .= $info["actor"]." interpreting ".$info["info"]."<br>";
+        }
+
+        return $text;
+    }
 }
