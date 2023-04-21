@@ -8,7 +8,7 @@ class Casting {
     // Saves Actor object & Role object in an array "item"
     private array $cast = [];
 
-    public function __construct(Movie $movie, Producer $producer, array $cast) {
+    public function __construct(Movie $movie, Producer $producer) {
         $this->movie = $movie;
         $this->producer = $producer;
     }
