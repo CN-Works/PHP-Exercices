@@ -13,6 +13,9 @@ class Movie {
     // Genre
     private Genre $genre;
 
+    // Casting
+    private Casting $casting ;
+
     // Constructor
     public function __construct(string $title, string $releaseDate, int $duration, string $synopsys, Producer $producer, Genre $genre) {
         $this->title = $title;
@@ -29,7 +32,7 @@ class Movie {
 
     // returns title
     public function __toString() {
-        return $this->title;
+        return $this->title." (".date_format($this->releaseDate,"Y").")";
     }
 
     
@@ -105,5 +108,18 @@ class Movie {
     public function setTitle($title)
     {
         $this->title = $title;
+    }
+
+
+
+    // casting related
+    public function getCasting()
+    {
+        return $this->casting;
+    }
+
+    public function setCasting($casting)
+    {
+        $this->casting = $casting;
     }
 }
