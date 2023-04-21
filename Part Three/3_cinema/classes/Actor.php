@@ -20,4 +20,13 @@ class Actor extends Person {
     {
         $this->characters = $characters;
     }
+
+    public function addCharacter(Role $role, Casting $casting) {
+        $new_character = array(
+            "role" => $role,
+            "casting" => $casting,
+        );
+
+        $characters[] = $new_character;
+    }
 }
