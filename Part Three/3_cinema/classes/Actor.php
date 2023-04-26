@@ -5,7 +5,7 @@ class Actor extends Person {
     private array $characters = [];
 
     public function __construct(string $firstname, string $lastname, string $sex, string $dob) {
-        parent::__construct();
+        parent::__construct($firstname, $lastname, $sex, $dob);
     }
 
     // Getter & setters
