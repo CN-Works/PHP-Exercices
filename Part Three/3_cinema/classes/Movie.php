@@ -24,11 +24,14 @@ class Movie {
         // Movie information
         $this->duration = $duration;
         $this->synopsys = $synopsys;
+
+        // Genre
         $this->genre = $genre;
         $this->genre->addMovie($this);
 
         // Producer
         $this->producer = $producer;
+        $this->producer->addMovie($this);
     }
 
     // returns title
