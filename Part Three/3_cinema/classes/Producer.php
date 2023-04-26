@@ -27,7 +27,7 @@ class Producer extends Person {
     }
 
     public function showAllMovies() {
-        $text = "<h2>".$this."</h2><br>";
+        $text = "<h2>".$this."'s movies</h2><br>";
 
         foreach($this->movies as $movie) {
             $text .= $movie."<br>";
