@@ -16,5 +16,7 @@ $genreFiction = New Genre("Fiction");
 
 // Movies
 $movie1 = new Movie("Devils in space","20-05-2005",115,"Cool film with devils in space",$producer_one,$genreFiction);
-echo "<br>----------<br>";
-echo $genreFiction->showAllMovies();
+//echo "<br>----------<br>";
+//echo $genreFiction->showAllMovies();
+
+echo $producer_one->showAllMovies();
