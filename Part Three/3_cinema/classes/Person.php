@@ -19,7 +19,7 @@ class Person {
 
     public function __toString() {
         // returns person's name, ex : "John Doe"
-        return $this->firstname." ".$lastname;
+        return $this->firstname." ".$this->lastname;
     }
 
     // Getters & setters
