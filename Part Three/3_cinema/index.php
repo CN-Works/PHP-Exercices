@@ -14,9 +14,18 @@ echo "Born in ".date_format($producer_one->getDob(),"d M Y");
 // Genre
 $genreFiction = New Genre("Fiction");
 
+// Actors
+$actor1 = new Actor("Marc","Johnson","m","28-06-2001");
+
+// Roles
+$james_bond = new Role("James Bond");
+
 // Movies
 $movie1 = new Movie("Devils in space","20-05-2005",115,"Cool film with devils in space",$producer_one,$genreFiction);
+
+// Showing all movies by Genre
 //echo "<br>----------<br>";
 //echo $genreFiction->showAllMovies();
 
-echo $producer_one->showAllMovies();
+// Showing all movies by Producer
+//echo $producer_one->showAllMovies();
