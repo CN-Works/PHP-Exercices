@@ -23,7 +23,7 @@ $batman = new Role("Batman");
 
 // Movies
 $movie1 = new Movie("Devils in space","20-05-2005",115,"Cool film with devils in space",$producer_one,$genreFiction);
-$movie2 = new Movie("Devils in space 2","20-05-2008",115,"Cool film with devils in space 2",$producer_one,$genreFiction);
+$movie2 = new Movie("Devils in space 2","20-05-2008",145,"Cool film with devils in space 2",$producer_one,$genreFiction);
 
 // Casting
 $casting1 = new Casting($movie1,$producer_one);

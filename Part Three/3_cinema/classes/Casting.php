@@ -2,38 +2,20 @@
 
 class Casting {
     // Basic informations
-    private Producer $producer;
     private Movie $movie;
 
     // Saves Actor object & Role object in an array "item"
     private array $cast = [];
 
-    public function __construct(Movie $movie, Producer $producer) {
+    public function __construct(Movie $movie) {
         // movie
         $this->movie = $movie;
         $this->movie->setCasting($this);
-
-        // producer
-        $this->producer = $producer;
     }
 
     public function __toString() {
         return $this->movie."'s casting";
     }
-
-    // producer related
-    public function getProducer()
-    {
-        return $this->producer;
-    }
-
-    public function setProducer($producer)
-    {
-        $this->producer = $producer;
-
-        return $this;
-    }
-
 
 
     // movie related
