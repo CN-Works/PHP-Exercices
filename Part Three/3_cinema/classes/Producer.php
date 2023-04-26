@@ -7,7 +7,7 @@ class Producer extends Person {
     private array $movies = [];
 
     public function __construct(string $firstname, string $lastname, string $sex, string $dob) {
-        parent::__construct();
+        parent::__construct($firstname, $lastname, $sex, $dob);
     }
 
     // Movies
