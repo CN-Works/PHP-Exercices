@@ -61,7 +61,7 @@ class Person {
     // Date of birth related
     public function getDob()
     {
-        return date_format($this->dob,"d.m.y");
+        return $this->dob;//date_format($this->dob,"d.m.y");
     }
 
     public function setDob($dob)
