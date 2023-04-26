@@ -45,7 +45,7 @@ class Genre {
         $text = "<h2>All ".$this." movies</h2><br>";
 
         foreach($this->movies as $movie) {
-            $text .= $movie;
+            $text .= $movie."<br>";
         }
 
         return $text;
