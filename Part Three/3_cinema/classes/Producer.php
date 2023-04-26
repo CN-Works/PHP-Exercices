@@ -23,6 +23,16 @@ class Producer extends Person {
 
     // Adding a movie
     public function addMovie(Movie $new_movie) {
-        $this->movie[] = $new_movie;
+        $this->movies[] = $new_movie;
+    }
+
+    public function showAllMovies() {
+        $text = "<h2>".$this."</h2><br>";
+
+        foreach($this->movies as $movie) {
+            $text .= $movie."<br>";
+        }
+
+        return $text;
     }
 }
