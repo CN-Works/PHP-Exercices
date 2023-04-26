@@ -11,7 +11,7 @@ class Casting {
     public function __construct(Movie $movie, Producer $producer) {
         // movie
         $this->movie = $movie;
-        $this->movie->setCasting($this)
+        $this->movie->setCasting($this);
 
         // producer
         $this->producer = $producer;
