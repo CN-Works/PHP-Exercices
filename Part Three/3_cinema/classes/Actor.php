@@ -35,7 +35,7 @@ class Actor extends Person {
         $text = "<h2>".$this." played roles</h2><br>";
 
         foreach($this->characters as $roleInfo) {
-            $text .= $roleInfo["role"]." interpreting ".$roleInfo["casting"]->getMovie()."<br>";
+            $text .= $roleInfo["role"]." interpreted in ".$roleInfo["casting"]->getMovie()."<br>";
         }
 
         return $text;
