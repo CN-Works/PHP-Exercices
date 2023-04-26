@@ -5,4 +5,6 @@ spl_autoload_register(function ($class_name) {
     include "classes/" . $class_name . '.php';
 });
 
-echo "test exo";
+$producer_one = new Producer("Daniel","Pelard","m","15-10-1990");
+
+echo $producer_one;
