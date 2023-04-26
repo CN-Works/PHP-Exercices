@@ -83,7 +83,7 @@ class Casting {
         $text = "<h2>".$this->movie."'s casting</h2><br>";
 
         foreach($this->cast as $info) {
-            $text .= $info["actor"]." interpreting ".$info["info"]."<br>";
+            $text .= $info["actor"]." interpreting ".$info["role"]."<br>";
         }
 
         return $text;

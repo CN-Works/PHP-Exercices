@@ -38,3 +38,8 @@ echo "<br>----------<br>";
 
 // Showing all movies by Actor
 echo $actor1->showAllCharacters();
+echo "<br>----------<br>";
+
+// Show casting
+echo $casting1->showCasting();
+echo "<br>----------<br>";
