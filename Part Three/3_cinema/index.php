@@ -43,3 +43,6 @@ echo "<br>----------<br>";
 // Show casting
 echo $casting1->showCasting();
 echo "<br>----------<br>";
+
+// Show all played roles by Role
+echo $james_bond->showAllCharacterApparition();
