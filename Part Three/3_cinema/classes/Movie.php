@@ -25,6 +25,7 @@ class Movie {
         $this->duration = $duration;
         $this->synopsys = $synopsys;
         $this->genre = $genre;
+        $this->genre->addMovie($this);
 
         // Producer
         $this->producer = $producer;
