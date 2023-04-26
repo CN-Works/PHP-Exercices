@@ -74,6 +74,9 @@ class Casting {
 
         // adding the new character to the cast
         $this->cast[] = $new_character;
+
+        $actor->($role,$this);
+        $role->($actor,$this);
     }
 
     public function showCasting() {

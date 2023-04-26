@@ -24,12 +24,17 @@ $movie1 = new Movie("Devils in space","20-05-2005",115,"Cool film with devils in
 
 // Casting
 $casting1 = new Casting($movie1,$producer_one);
+$casting1->addingActorsAndRoles($actor1,$james_bond);
 
 ////////////////////////////////////////////
 
 // Showing all movies by Genre
-//echo "<br>----------<br>";
-//echo $genreFiction->showAllMovies();
+echo $genreFiction->showAllMovies();
+echo "<br>----------<br>";
 
 // Showing all movies by Producer
-//echo $producer_one->showAllMovies();
+echo $producer_one->showAllMovies();
+echo "<br>----------<br>";
+
+// Showing all movies by Actor
+echo $actor1->showAllCharacters();
